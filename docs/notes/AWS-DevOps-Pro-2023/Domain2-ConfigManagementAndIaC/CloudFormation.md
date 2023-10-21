@@ -308,6 +308,57 @@ SUpported ParamTypes
 /aws is a public parameter hosted by AWS
 
 
+## Dynamic References
+reference things from within the template, not just params
+i.e. get a secret from SM
 
+Supports
+ssm
+ssm-secure
+sm
+up to 60 dynamic references in a template
+{{resolve:service-name:reference-key:version}}
 
+does not support public SSM parameters (only in params)
+
+{{resolve:ssm:reference-key:version}}
+{{resolve:ssm-secure:reference-key:version}}
+{{resolve:secretsmanager:reference-key:version}}
+
+Not all resources are supported
+
+Secrets never stored in CFN
+
+## StackSets
+deploy the same template cross account and cross region in a single run
+
+When you update the stack set, all stacks are update
+Can be applied in all accounts
+
+Create stackSet
+Update StackSet - cannot pick and choose, all stacks
+Delete Stacks
+* can delete a single stack
+* can disconnect stack from stackset
+* delete all stacks from stackSet
+Delete StackSets
+* must delete all stacks first
+
+Deployment options
+* Deployment order - order of regions
+* Max concurrent accounts
+* Failure tolerance - i.e. if a region/account fails in the set
+* region Concurrency - default is sequential
+* Retain stacks
+
+Permission Model
+* self managed permissions
+* Service Managed Permissions
+
+Ability to auto deploy stack instance to new AWS account in org
+
+Can delegate stackSets admin to member accounts in AWS orgs
+TrustedAccess is required for this
+
+CHANGES MADE TO A STACK, NOT STACKSET, VIA CFN IS NOT CONSIDERED DRIFT; ONLY CHANGES OUT SIDE OF CFN
 
