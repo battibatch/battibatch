@@ -285,5 +285,29 @@ out of scope for the exam
 
 ## Service Role
 
+IAM roles that alloes CFN to do all the work on your behalf
+by default, it uses a temp session from user creds
+
+Use Cases: 
+* least privledge
+* do not give user permissions to be able create all the resources
+
+## SSM Parameter Type
+Reference params in System Manager in param store
+specify param key as the value 
+CFN fetchs the latest value of param
+Validation done on SSM key, not value
+SUpported ParamTypes
+* AWS::SSM::Parameter::Name
+* AWS::SSM::Parameter::Value<String>
+* AWS::SSM::Parameter::Value<List<string>>
+* AWS::SSM::Parameter::Value<List<commaDelimitedList>>>
+* AWS::SSM::Parameter::Value<List<AWS Specific param>>
+* AWS::SSM::Parameter::Value<AWS Specific param>
+
+/aws is a public parameter hosted by AWS
+
+
+
 
 
