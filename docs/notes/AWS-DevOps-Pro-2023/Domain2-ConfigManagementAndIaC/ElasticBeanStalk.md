@@ -41,6 +41,58 @@ web manage work sent to worker
 ## Deployment modes
 * single instance - 1 ec2
 * HA w/ LB - ASGs and RDS hot/standby instances.
+    * IF you link a DB to env, it will be cleaned up with env
 
+## Deployment options for Updates
+All in one
+* Beanstalk stops all instances updates code, restarts
+* Fast
+* downtime
+* No additional cost
 
+Rolling
+* App runs below capacity
+can set the bucket size
+* if running at 4, stop 2 update, restart, stop next 2, update them
+App will run both version at the same time
+* no additional cost
+* Long deployment possible
 
+Rolling w/ additional batches
+* App runs at capacity
+* can set bucket size
+* running both version at the same time
+* deploy new EC2 instances w/ update
+* then rolled out the rest
+* Good for prod
+* Longer deployment
+additional cost for new ec2 instances
+
+Immutable
+* zero downtime
+* new code on new instances
+* come from new new temp asg
+* High cost, double capacity
+* Longest deployment, quick rollback in case of failure
+* Great for Prod
+
+Blue/Green
+* not a direct feature of Beanstalk
+* Zero down time
+* create new stage env and deploy v2
+* can be validated independently
+* Route53 to set up weighted policy
+* swap URLs
+* Very manual
+
+Traffic splitting (canary)
+* Canary testing
+* new app deployed to temp ASG with same capacity
+* small % of traffic sent to temp ASG for some time
+* Deployment health is monitored of new ASG
+* If failure, trigger a rollback
+* No app downtime
+* new instances can be migrated from old ASH to new one
+* Old instances deleted
+
+## 
