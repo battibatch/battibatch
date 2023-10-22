@@ -95,4 +95,16 @@ Traffic splitting (canary)
 * new instances can be migrated from old ASH to new one
 * Old instances deleted
 
-## 
+## Web Server vs Worker
+If app performs tasks that are long to complete, move to worker
+decouple app into 2 tiers
+example, process video on worker, not web. 
+does not impact web tier
+
+## Notifications
+Creates rules in event bridge
+* ENV operation status - Create/updates/delete
+* Resources status - ASG, ELB, EC3
+* managed update status - started failed
+* env health status
+
