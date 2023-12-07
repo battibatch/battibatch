@@ -83,7 +83,7 @@ Threat IP
 In multi account Guard DUty Setup, only the admin can manage these lists.
 
 ## CFN Integration 
-can enabled using CFN tempalte
+can enabled using CFN template
 * if it already enabled, stack will fail
 
 Solve with customer resource Lambda to conditional enable if not
