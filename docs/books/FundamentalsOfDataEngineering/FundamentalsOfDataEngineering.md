@@ -6,6 +6,7 @@ Joe Reis, Matt Housley
 ### Chapter 01: Data Engineering Described
 
 #### What is Data Engineering
+
 - Data engineering is the development, implementation, and maintenance of systems and processes that take in raw data and produce high-quality, consistent information that supports downstream use cases, such as analysis and machine learning. Data engineering is the intersection of security, data management, DataOps, data architecture, orchestration, and software engineering. A data engineer manages the data engineering lifecycle, beginning with getting data from source systems and ending with serving data for use cases, such as analysis or machine learning.
 
 - Data Engineering vs Data Science
@@ -13,14 +14,13 @@ Joe Reis, Matt Housley
 
 - Data Science Hierarchy of Needs
 ![alt text](image-1.png)
-![alt text](ds-hier-needs.png)
 
 - Data from various sources -> Data Engineering -> data Science and analysis
 
 #### Data Engineering Skills and Activities
 
 - Balancing of Data Engineering
-    - COst
+    - Cost
     - Agility
     - Scalability
     - Simplicity
@@ -35,7 +35,7 @@ Joe Reis, Matt Housley
 - DE Business Responsibilities
     - Know hoe to communicate w/ nontechnical & tech peeps
     - Understand how to scope and gather Business and product requirements
-    - Understand the cultueral foundation of Agile/DevOps/DataOps
+    - Understand the cultural foundation of Agile/DevOps/DataOps
     - Control costs
     - Learn COntinuously
 
@@ -75,7 +75,6 @@ Joe Reis, Matt Housley
     5. Serving Data
 
 ![alt text](image-2.png)
-![alt text](de-lifecycle.png)
 
 - Data ENgineering lifecycle is a subset of the  Data Lifecycle
 
