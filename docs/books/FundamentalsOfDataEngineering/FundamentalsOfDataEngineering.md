@@ -57,7 +57,7 @@ Joe Reis, Matt Housley
     - Data Architects
     - SEs
     - DevOps and SREs
-- Downstream stakholders
+- Downstream stakeholders
     - Data scientists
     - Data Analysts
     - ML/AI engineers/researchers
@@ -82,7 +82,7 @@ Joe Reis, Matt Housley
 - SOurce systems is the origin of data used in the DE lifecycle
     - Evaluating source system: Key considerations
         - What are the essential characteristics of the data sources? Is it an app? a swarm of IoT devices?
-        - How is data persisted in the sources ystem" is data persisted long term or temporary? 
+        - How is data persisted in the sources system" is data persisted long term or temporary? 
         - At what rate is data generated? How many events/s? GB/hour?
         - What level of consistency can DE expect from output data? if you are running data-quality checks against output data, how often do inconsistencies occur? - nulls, bad formatting, etc. ? 
         - How often do errors occur? 
@@ -92,8 +92,8 @@ Joe Reis, Matt Housley
         - if schema changes, how is this dealt w/ and communicated downstream
         - how frequently should data be pulled from the source system? 
         - For stateful systems, is data provided as periodic snapshots or updated events from change data capture (CDC)? What is the logic for how changes are performed and how are these tracked in the source database? 
-        - Who/what is the data provider that will transmit the data for downstream consumption?
-        will reading from ta data source impact its performance? 
+        - Who/what is the data provider that will transmit the data for downstream consumption? 
+        - will reading from ta data source impact its performance? 
         - Does the source system have upstream data dependencies? what are the characteristics of these upstream systems? 
         - Are data quality check in place to check for late or missing data? 
 
