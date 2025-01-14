@@ -35,7 +35,14 @@
     3. Kubernetes
 6. DevSecOps
 7. DevSecFinOps
-8. 
+8. Jenkins 101
+    1. Controllers
+    2. Agents
+    3. Job types
+        1. Freestyle
+        2. Pipeline
+        3. Multi-branch Pipeline
+        4. Organization Pipeline
 
 
     
