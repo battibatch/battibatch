@@ -238,25 +238,171 @@ Software Engineering
 ### Chapter 03: Designing Good Data Architecture
 
 #### What is Data Architecture
+before defining, define Enterprise Architecture: 
 
+![alt text](image-5.png)
+
+Enterprise architecture is the design of systems to support change in the enterprise achieved by flexible and reversible decisions reached through careful evaluation of trade-offs
+
+- Change Management is related to reversible decisions and is a central them of enterprise architecture frameworks
+
+**Data architecture** is the design of systems to support the evolving data needs of an enterprise, achieved by flexible and reversible decisions reached through careful evaluation of trade-offs
+- operational architecture is the functional requirements related to people process, and tech. 
+- technical architecture outlines how data is ingested, stored, transformed and served along the data engineering lifecycle
 
 #### Principles of GOod Data Architecture
 
+Principle 1: Choose common components wisely
+- storage, SCM, observability, monitoring, and orchestration systems
+
+Principle 2: Plan for failure
+- Availability: % time is operable
+- Reliability: probability of a system meeting define standards in performing its intended function during a specified interval
+- REcovery Time objective
+- Recovery Point Objective
+
+Principle 3: Architect for scalability
+- Scale up and down
+
+Principle 4: Architecture is leadership
+- architects should be competent and make good choices
+
+Principle 5: always be Architecting
+- start w/ baseline (current Arch)
+- plan for target, mapping out sequence to get there
+
+Principle 6: Build loosely couple systems
+- re: Amazon's API mandate
+- Loose couple people and technology systems
+
+Principle 7: Make reversible decisions
+- No 1 way doors; find ways to avoid irreversible decisions
+
+Principle 8: Prioritize Security
+- hardened perimeter
+- Zero trust 
+- Shared responsibility
+
+Principle 9: Embrace FinOps
+- Look for cost optimizations
+- Maximize value
 
 #### Major Architecture Concepts
+Domain: is the real world subject area for which we are architecting. 
+Service: is a set of functionality whose goal is to accomplish a task
+- Domains can contain many services; they may share services
 
+Use distributed systems to enable: 
+- scaling (horizontal and verticle)
+- Elasticity (scale dynamically) 
+- Availability
+- Reliability
+
+Loose couple over tight couple
+-use tiers
+    - Data -> App/Logic -> Presentation
+- avoid monoliths
+- use microservices
+
+![alt text](image-6.png)
+
+Other considerations
+- User access: Single vs Multi tenant
+- Event driven architecture
 
 #### Examples 
 
-#### Who is involved
+Data Warehouse
+- Central data hub used for reporting and analysis
+- Highly formatted
+- Redshift, BigQuery, SNoflake, etc.
+
+![alt text](image-7.png)
+
+Data Mart
+- More refined subset of a Data warehouse to serve analytics, reporting but focused on a single organization, dept or LOB
+- Each dept would have its own Data mart specific to it
+
+Data Lake
+- No structure to the data
+- Very hard to read data out; became a dumping ground
+
+Data Lakehouse
+- Controls, management and structure like a warehouse
+- while still housing data in object store and supporting flexible query and transform engines
+
+Lambda Architecture
+- system operating independent of each other
+    - batch, streaming, and service
+- source system is immutable and append only, send to different streams
+- trad-off is managing multiple systems with different codebases can be error prone
+![alt text](image-8.png)
+
+Kappa Architecture
+- response to Lambda
+- just use stream processing as backbone for all data handling
+    - ingest, storage, and serving
+- true event based
+- realtime and batch supported
+- trade-off is it is still complex, expensive
+![alt text](image-9.png)
+
+IoT
+
+Data Mesh
+- response to sprawling monolithic data platforms
+- 4 key components
+    - Domain oriented decentralized data ownership and architecture
+    - data as a product
+    - self-serve data infra as a platform
+    - federated computational governance
+![alt text](image-10.png)
 
 ### Chapter 04: Choosing Technologies Across the Lifecycle
+Tactical plan for making technology choices once we have a strategic architecture blueprint
+- COnsiderations
+    - Team size and capabilities
+    - speed to market
+    - interoperability
+    - Cost optimization and business value
+        - total cost of ownership
+        - total opportunity cost of ownership
+        - FinOps
+    - Today vs Future; immutable vs transitory techs
+        - recommend a 2 year time horizon to reevaluate tech choices
+    - location (on prem/cloud/hybrid/multicloud)
+        - Don't use Big data tools if you don't need to
+    - BUild vs buy
+        - know the competitive advantage and where it makes sense to invest
+        - They favor OSS by default
+        - Don't treat internal operational overhead as a sunk cost
+        - Value
+        - delivery model
+        - Support
+        - Releases
+        - Sale cycle and Pricing
+    - Mono vs modular
+        - Avoid monoliths
+        - Architect for interoperability
+        - Avoid easy to get into, painful to get out of trap
+        - flexibility
+    - Serverless vs servers
+        - Serverless until you hit a certain scale
+        ![alt text](image-11.png)
+        - Workload size and complexity
+        - Execution frequency and durations
+        - Requests and networking
+        - Language
+        - runtime limitations
+        - Cost
+    - Optimization, performance and benchmarks
+    - Undercurrents of DE lifecycle
 
 
 ## Part II: Foundation and Building Blocks
 
 ### Chapter 05: Data Generation in Source Systems
-
+![alt text](image-12.png)
 
 ### Chapter 06: Storage
 
