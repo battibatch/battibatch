@@ -404,10 +404,161 @@ Tactical plan for making technology choices once we have a strategic architectur
 ### Chapter 05: Data Generation in Source Systems
 ![alt text](image-12.png)
 
+Data is an unorganized context-less collection of facts and figures.
+- Analog data created in the real work: sounds, writing, etc.
+- Digital Data created by converting analog or native product of a digital system
+
+Sources Systems
+- Files and unstructured data (CSV, TXT. JSON, XML, etc.)
+- APIs: standard way pf exchanging data
+    - REST
+    - GraphQL - query language for app data, alternative to REST; built around JSON
+    - Webhooks
+    - RPC and gRPC- remote procedure call
+- App DB: stores the state of an app; typically an online transaction processing (OLTP)
+    - Support for atmoic transaction is critical
+        Atomic is a set of several changes that are committed as a unit
+    - Others are consistency, isolation and durability
+- Online Analytical Processing systems
+    - run large analytics queries and typically inefficient in handling look ups of individual records
+- Change Data Capture (CDC): extracting each change event (insert, update, delete) from a DB
+    - used to replicate DBs in near real time or create event stream for downstream
+- Logs
+    - OS, App, Server, container, network, IoT
+    - who, what happened, when 
+    - encoded
+    - Different resolution or level
+- CRUD
+    - Create, read, updated, delete
+- Insert Only
+- Messages and streams
+    - time is important w/ streams 
+    ![alt text](image-13.png)
+
+Databases
+- Considerations for choosing a DB tech
+    - DB mgmt system
+    - Lookups
+    - QUery Optimizer
+    - Scaling distribution
+    - Modeling Patters
+    - CRUD
+    - COnsistency
+- Types of DBs
+    - Relational
+    - Nonrelational
+    - Key Value stores
+    - Document Stores
+    - Wide COlumn - optimized for massive amounts of data w/ high transaction rates and low latency
+    - Graph - store data w/ a mathematical graph structure
+    - Search - Nonrelational DB to search your data's complex and straightforward semantic and structural characteristics
+    - Time series
+
+Data Sharing
+
+3rd party Data Sources
+
+Message Queues and Event Stream Platforms
+- Considerations
+    - Message ordering and delivery
+    - Delivery Frequency
+    - Scalability
+    - Topics - collection of related events in a stream
+    - Stream partitions - subdivisions of a stream into multiple streams
+    - Fault tolerance and resilience
+
 ### Chapter 06: Storage
+
+![alt text](image-14.png)
+
+Raw ingredients
+- Magnetic Disk
+- SSD
+- RAM
+- Networking and CPU 
+- Serialization: will inform how well queries perform across network, CPU
+- Compression
+    - 3 advantages
+        - Smaller
+        - increase scan speed
+        - improved Network performance
+- Caching
+
+Data Storage Systems
+- Single Machine vs Distributed machines
+- Eventual vs Strong COnsistency
+    - Basically available: consistency is not guaranteed
+    - Soft-state: state of transaction is fuzzy
+    - Eventual consistency: at some point, reads will return consistent values
+- Files Storage
+    - Files have these characteristics
+        - finite length
+        - append operations
+        - Random Access
+    - Local Disk vs NAS vs CLoud FS 
+- Block storage
+    - Access data at the block level for better control of size, scalability and durability
+    - RAID
+    - Storage Area Network (SAN)
+    - Cloud Block storage
+- Object storages
+    - All shapes and sizes of data/files
+    - Key value stores
+    - key in separating compute and storage
+    - great for batch reads/writes
+    - not as good for transactional workload
+    - gold standard for data lakes
+    - enables obj versioning
+    - Tiers of storage too
+    - Object store backed file systems
+- Cache and Memory backed storage systems
+    - Memcache and Redis
+- Hadoop Distributed file system
+- Streaming storage
+    - data can be temporal
+    - Replay data
+
+- Indexes, Partitioning, and Clustering
+    - Columnar serialization allows a DB to scan only the columns required for a particular query
+        - COlumnar is bad for transactional, but great for large scan data scans
+    - Use partitioning and clustering to reduce what needs to be scanned
+
+Data Engineering storage Abstractions
+- COnsiderations
+    - Purpose and Use case
+    - Update patterns
+    - Cost
+    - Separate storag and compute
+- Data Warehouse
+    - Standard for OLAP architecture
+    - often used to organize data into a data lage
+- Data Lake
+    - unstructured
+- Data Lakehouse
+    - combines lake and warehouse
+    - a metadata and file-mgmt layer deployed w/ data mgmt and transformation tools
+    - can have good interoperability if data is in open formats
+
+Big Ideas
+- Stream to batch
+- Data catalog: centralized metadata store for all data across an org
+- Data sharing for cross org
+- separate compute and storage
+- Ephemeral and scalable
+
+Data Storage Lifecycle and Retention
+- Hot
+- Warm
+- Cold
+![alt text](image-15.png)
+
+- Value of the data informs retention
+- Compliance
 
 
 ### Chapter 07: Ingestion
+- Key ENgineering Concepts for the ingestion Phase
+
 
 
 ### Chapter 08: Queries, Modeling, and Transformation
