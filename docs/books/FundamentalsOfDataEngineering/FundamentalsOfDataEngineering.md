@@ -558,10 +558,118 @@ Data Storage Lifecycle and Retention
 
 ### Chapter 07: Ingestion
 - Key ENgineering Concepts for the ingestion Phase
+    - What is the use case for the data I'm ingesting 
+    - Can I reused this data and avoid ingesting multiple versions of the same dataset
+    - where is the data going? What's the destination? 
+    - What is the expected data volume? 
+    - What format is the data in? Can downstream storage and transformations accept this fomat? 
+    - Is the sources data in good share for immeditate downstreamuse? that is, is the data of good quality? WHat post-processing is required to service it? whar are data-quality resits (e.g. could bot traffic contaminate the data) 
+    - Does the data require in-flight processing for downstream ingestion if the data is from a streaming source?
 
+Factors to consider
+- Bounded vs unbouded data
+    - assume all data is unbounded until it is bounded
+    ![alt text](image-16.png)
+- frequency
+    ![alt text](image-17.png)
+- synchronous vs asynchronous
+    ![alt text](image-18.png)
+    ![alt text](image-19.png)
+- serialization and deserialization
+    - serialization means encoding the data from a sources and preparing data structure for transmission and intermediate storage stages
+- throughput and scalability
+- reliability and durability
+- payload
+    - kind of data (video, image, text)
+    - shape
+        - tabular (M rows and N columns)
+        - semi-structure JSON (key value pairs) 
+        - unstructured Text
+        - Images (hight, width, RGB)
+        - Uncompressed audio (number of channels, sample depth, sample rate, length) 
+    - Size
+    - schema and data type
+    - detecting and handling upstream and downstream changes
+    - schema registries
+    - Metadata
+    - 
+- push vs pull vs poll
 
+Batch COnsiderations
+- Time interval based
+- Size based
+
+Batch ingestion patters
+- SNapshot or differential extraction
+    - full or incremental
+- File base export and ingestion
+- ETL vs ELT 
+    - extract: getting data from the source system
+    - Load: into storage destination
+    - Transform
+- Inserts, Updates and batch size
+    - Batch typically performs better w/ larger sizes of inserts/updates
+- Data Migration
+
+Message and stream ingestion COnsiderations
+- schema evolution
+- Late arriving data
+- ordering and multiple delivery
+- replay
+- time to live
+- message size
+- Error handling and dead-letter queues
+- Consumer pull and push
+    - pull is default for most DE apps
+- Location
+
+Ways to ingest
+- Direct DB Connection
+- Change Data Capture
+    - Batch CDC
+    - Continuous CDC
+    - CDC and replication
+    - CDC Considerations
+        - resources
+        - batches can cause excessive loads
+- APIs
+
+DO not reinvent the wheel
+- Data connectors probably already exists
+
+Moving data w/ Obj Storage
+- electronic data interchange (EDI) - Data movement method
+- DB and File exports
+- shell 
+- ssh
+- SFTP and SCP
+- Webhooks
+    ![alt text](image-20.png)
+- Web interface
+- Web Scripting
+
+Practical Issues w/ Common file formats
+- CSV is error prone
+- Parquet, Arrow, Avro, ORC are better
+    - but newer and may not be native
+
+Transfer Appliance for Data migrations
+- a box to move 100TBs instead of over the network
 
 ### Chapter 08: Queries, Modeling, and Transformation
+
+Queries
+- allow you to retrieve and act on data
+- Data definition language (DDL) 
+    - CREATE, DROP, UPDATE
+- Data manipulation language
+    - SELECT, INSERT, UPDATE, DELETE, COPY, MERGE
+- Data control language
+    - GRANT, DENY
+- Transaction control language
+    - COMMIT, ROLLBACK
+- Life of a QUery
+![alt text](image-21.png)
 
 
 ### Chapter 09: Saving Data for Analytics, ML, and Reverse ETL
@@ -580,3 +688,4 @@ Data Storage Lifecycle and Retention
 
 
 ## Index
+- 
