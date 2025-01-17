@@ -120,9 +120,10 @@ Joe Reis, Matt Housley
 
 - Evaluating Ingestion systems
     - Consideration for Ingestion
-        - What are the use cases for the data I'm ingesting? Can I reused this data rather than create multiple version fo the same dataset? 
-        - Are the system generating and ingesting the data reliably? is the data avaialble when I need it? 
-        - What is the data setination after ingestion? 
+        - What are the use cases for the data I'm ingesting?
+        - Can I reused this data rather than create multiple version fo the same dataset? 
+        - Are the system generating and ingesting the data reliably? is the data available when I need it? 
+        - What is the data destination after ingestion? 
         - How Frequently will I need to access the data? 
         - In what volume will the data typically arrive? 
         - What format is the data in? Can my downstream storage and transformation systesm handle this format? 
