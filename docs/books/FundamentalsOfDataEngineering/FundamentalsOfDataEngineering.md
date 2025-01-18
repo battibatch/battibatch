@@ -661,7 +661,7 @@ Transfer Appliance for Data migrations
 
 Queries
 - allow you to retrieve and act on data
-- Data definition language (DDL) 
+- Data definition language (DDL)
     - CREATE, DROP, UPDATE
 - Data manipulation language
     - SELECT, INSERT, UPDATE, DELETE, COPY, MERGE
@@ -669,8 +669,101 @@ Queries
     - GRANT, DENY
 - Transaction control language
     - COMMIT, ROLLBACK
-- Life of a QUery
+
+Life of a QUery
 ![alt text](image-21.png)
+
+QUery Optimizer
+- optimized your join strategy and schema
+    - Join types: inner, outer, left, cross
+    - Join relationships: 1:1, 1:many, many:1, many:many
+    - Try to pre-join data that is often queried
+    - understand how your query optimizer handles joins
+    - Use Common table expressions instead of nested subqueries or temporary tables
+- Use the explain plan and understand your query's performance
+    - EXPLAIN command
+    - Areas to monitor
+        - Resources: disk, mem, and network
+        - Data loading time vs processing time
+        - query execution time, number of records, the size of the data scanned and the quantity of the data shuffled
+        - competing queries that might cause resource contention in your DB
+        - number of concurrent connections used vs connection available. Oversubscribed concurrent connection can have a negative effects on users
+- Avoid full table scans (SELECT *)
+- Know how DB handles commits
+- Vacuum dead records (removing dead records)
+- Leverage cached queries
+
+Queries on streaming data
+- Basic query patterns on streams
+- fast follower approach
+![alt text](image-22.png)
+- Kappa Architecture
+- WIndows, triggers, emitted stats, and late arriving data
+- Session WIndow
+![alt text](image-23.png)
+- Fixed time windows
+![alt text](image-24.png)
+- SLiding Windows
+![alt text](image-25.png)
+- Watermarks
+![alt text](image-26.png)
+- COmbining streams with other data
+- COnvention table joins
+![alt text](image-27.png)
+- Enrichment
+![alt text](image-28.png)
+- stream to stream joins
+![alt text](image-29.png)
+
+Data Modeling
+- avoid jumping into building data systems w/o a plan to organize data in a way that is useful
+- A data model represents the way data relates to the real world. It reflects how the data must be structured and standardized to best reflect your orgs' processes, definitions, workflows and logic
+![alt text](image-30.png)
+    - Conceptual 
+        - contains business logic and rules and describes systems data suchas schema, tables and fields
+        - Entity relationship diagram
+    - Logical
+        - details how the conceptual model will be implemented in practice by adding significantly more detail
+    - Physical
+        - defines how the logical model will be implemented in a DB system
+- Normalization is a DB data modeling practice that enforces strict control over the relationships of tables and columns withing a DB. The goal is to remove redundancy of data and ensure referential integrity
+    - 4 main objective
+        - to free the collection of relations from undesirable insertion, update and deletion dependencies
+        - to reduce the need for restructuring the collection of relations as new types of data are introduced and thus increase the lifespan fo the app programs
+        - to make the relational model more informative to users
+        - to make the collection of relations neutral to the query stats , where these stats are liable to change as time goes on
+    - Normal forms:
+        - Denormalized: no normalization, nested and redundant data is allowed
+        - First normal form (1NF): each column is unique and has a single value. The table has a unique primary key
+        - second normal form (2NF): 1NE + partial dependencies are removed
+        - third  normal form (3NF): 2NF + each table contains only relevant fields related to its primary key and has no transitive dependencies
+
+Techniques for modeling batch analytical data
+- Inmon
+    - Subject oriented: i.e. sales, marketing
+    - integrated: data from disparate sources are consolidated and normalized
+    - nonvolatile: data remains unchanged after stored
+    - time-variant: varying time ranges can be queried
+- Kimball
+![alt text](image-31.png)
+    - data is modeled w/ 2 general types of tables
+        - fact tables: quantitative and event related data.
+            - immutable
+            - should be lowest grain possible
+        - dimensions: qualitative data referencing facts
+            - when joined to a fact table, dimension tables describe what, where and when
+            - Denormalized
+    - Combined to make a star schema
+- Data vault
+![alt text](image-32.png)
+    - separates structureal aspects of a source system's data from its attributes
+    - load data into a handful of purpose built tables in an insert only manner
+    - 3 types of tables
+        - Hubs: stores business keys
+        - Links: maintains relationships among business keys
+        - Satellites: represent business keys attributes and context
+        
+
 
 
 ### Chapter 09: Saving Data for Analytics, ML, and Reverse ETL
