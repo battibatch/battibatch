@@ -762,11 +762,103 @@ Techniques for modeling batch analytical data
         - Hubs: stores business keys
         - Links: maintains relationships among business keys
         - Satellites: represent business keys attributes and context
-        
+    - wide Denormalized tables: many fields and denormalized data
+
+Modeling Stream Data
+- Nothing defined yet
+
+Transformations
+- manipulate, enhance, and save data for downstream use, increasing its value in a scalable, reliable and cost effective manner
+- different from a query
+    - a query retrieved the data from various source based on filtering and join logic
+    - a transform persists te results for consumption by additional transformation or queries
+        - may be ephemerally or permanently stored
+- transforms rely on orchestration
 
 
+- Batch transforms: run on discrete chunks of data
+    - patterns: 
+        - Distributed joins: we need to break a logical join into much smaller node joins that run on individual service in the cluster.
+        - Broadcast join: generally asymmetric w/ 1 large table deistributed across nodes and 1 small table that can easily fit on a single node. The query engine broadcasts the small table to all the nodes we it joins parts of the large table
+        ![alt text](image-33.png)
+        - Shuffle has join: if neither table is small enough to fit on a single node, the query engine will use shuffle hash
+        ![alt text](image-34.png)
+        - ETL, ELT, data pipelines
+
+    - SQL and Code-based transformation tools
+        - SQL first class citizen
+        - SQL declarative
+        - When to avoid SQL for batch transforms? 
+            - How difficult is it to code the transform in SQL? 
+                - The more complex, the more likely you should use code instead  
+            - How readable and maintainable will the resulting SQL be? 
+            - Should some of the transformation code be pushed into a custom lib for further reuse across the org?
+                - SQL doesn't use libs 
+    - Update Patterns
+        - transforms often persist data in place, so updates can be a pain
+        - Truncate and reload - clear the table of old data, and new output from transform is loaded.
+        - insert only: leave old records and insert new ones. 
+            - can maintain current view of data. 
+            - downside is it is computationally expensive to find the latest record at query time
+        - delete
+            - In columnar data, deletes are more expensive than inserts
+            - Hard delete permanently delete record
+            - soft delete marks record as deleted, but isn't
+            - insert deletion: inserts a new record w/ delete flag to support Insert only update pattern
+        - Upsert/merge
+            - takes a set of source records and looks for matches against a target table by using a primary key or other logical condition. 
+            - When a match occurs, the targe record gets updated w/ new record
+            - if no match, a new record is created 
+            - huge performance impacts for columnar
+    - Schema updates
+        - easier to update schema than data in columnar
+    - Data wrangling: takes messy, malformed data and turns it into useful clean data
+        - Usually a batch process
+        - think IDE for malformed data
+    - Business logic and derived data
+        - most common use case for transformations
+    - MapReduce
+        - viewed as powerful, but very rigid
+
+Materialized views, federation and query virtualization
+- Views: a DB object that we can select from a table. when we select a view, the DB creates a new query that combines the view's subquery with our query. 
+    - Help in security, create the view instead of added access to operator
+    - Help w/ common access patterns
+- Materialized Views: does pre-computation that the regular view does not; sort of cached
+    - significant query optimiztion 
+- Composable Materialized views
+    - In general, materialized views are not composable, but there can be now
+- Federated queries: DB feature that allows the OLAP db to select from an external data sources such as obj store or RDBMS
+![alt text](image-35.png)
+- Data virtualization
+    - relates to federated queries, but typically entails a data processing or query system that doesn't store the data internally
+    - good solution when data is stored across various data sources
+
+- streaming transforms: run on data as it arrives
+    ![alt text](image-36.png)
+    - transforms and queries are a continuum
+    - streaming DAG
+    ![alt text](image-37.png)
+    - micro batch vs true streaming
+        - understand the cost and requirements to decide
 
 ### Chapter 09: Saving Data for Analytics, ML, and Reverse ETL
+
+COnsiderations for Serving Data
+- Trust: end users must trust the data they are receiving
+- What is the use case and who is the user? 
+    - Who will use the data
+    - how will they use it? 
+    - what do stakeholders expect
+    - How can I collaborate w/ data stakeholders to understand how they data i'm working with will be used
+- Data product
+    - Jobs to be done w/ data
+    - considerations
+        - when someone uses the data product, what do they hope to accomplish? 
+        - will the data product serve internal or external users? 
+        - what are the outcomes and ROI of the data product you are building?
+- Self-service or not
+
 
 
 ### Chapter 10: Security and Privacy
