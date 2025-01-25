@@ -1,5 +1,6 @@
 # Fundamentals Of Data Engineering
 Joe Reis, Matt Housley
+July 2022
 
 ## Part I: Foundation and Building Blocks
 
@@ -47,8 +48,8 @@ Joe Reis, Matt Housley
     - Orchestrations
     - Software Engineering
 
-- Conttinuoum of DE
-    - Type A - Abstraction: uses COTS, doesn't reinvient the wheel
+- Continuum of DE
+    - Type A - Abstraction: uses COTS, doesn't reinvent the wheel
     - TYpe B - Build: build tool and systems; level 2 or 3 in maturity
 
 #### Data Engineering Inside and Org
@@ -107,7 +108,7 @@ Joe Reis, Matt Housley
         - Do you understand how this storage tech works? Are you utilizing the storage system optimally or committing unnatural acts; i.e. are you applying a high rate of random access updates in an object storage?
         - Will the storage system handle anticipated future scale? i.e. total available storage, read operation rate, write volume, etc.
         - will downstream users and process be able to retrieve data in the required SLA
-        - Are you capturing metadata about schema evolution, data flows, data lineage and so forth? metadata has a significant impact on the utility of the data and represents an investment in the future; dramatically enhancing discoverabilty and institutional knowledge to streamline future projects and architecture changes
+        - Are you capturing metadata about schema evolution, data flows, data lineage and so forth? metadata has a significant impact on the utility of the data and represents an investment in the future; dramatically enhancing discoverability and institutional knowledge to streamline future projects and architecture changes
         - is this a pure storage solution (obj store) or does it support complex query patterns (cloud data warehouse) 
         - Is the storage system schema-agnostic (obj store), flexible schema (Cassandra), enforced schema (cloud data warehouse) 
         - How are you tracking master data, golden records data quality, and data lineage for data governance? 
@@ -126,7 +127,7 @@ Joe Reis, Matt Housley
         - What is the data destination after ingestion? 
         - How Frequently will I need to access the data? 
         - In what volume will the data typically arrive? 
-        - What format is the data in? Can my downstream storage and transformation systesm handle this format? 
+        - What format is the data in? Can my downstream storage and transformation systems handle this format? 
         - Is the sources data in good shape for immediate downstream use? if so, for how long and what may cause it to be unusable? 
         - if the data is from a stream sources, does it need to be transformed before reaching its destination? Would an inflight transform be appropriate (transform the data within the stream)
 
@@ -137,7 +138,7 @@ Joe Reis, Matt Housley
     - COnsiderations for batch vs streaming
         - If I ingest the data in real time, can downstream storage system handle the rate of data flow? 
         - DO I need sub 1s data ingestion? WOuld micro batch work (every minute)?
-        - what are my use cases for stream ingestion? what specific benefits do I realize by implmenting streaming? if I get data in real time, what action can I take on the data that would be an improvement on batch? 
+        - what are my use cases for stream ingestion? what specific benefits do I realize by implementing streaming? if I get data in real time, what action can I take on the data that would be an improvement on batch? 
         - will my streaming-first approach cost more in terms of time, money, maintenance, downtime and opportunity cost rather than simple doing batch? 
         - Are my streaming pipeline and system reliable and redundant if infra fails? 
         - what tools are most appropriate for the use case? Managed services or deploy own instances? Who will manage? 
@@ -165,7 +166,7 @@ Getting value from the data
 - Data has value when used for a purpose
 
 Analytics is the core of most data endeavors
-- Opreationaly
+- Operationally
     - fine grained details of operations, real time dashboards
 - Business Intelligence, ad hoc
     - Describe business past and current state
@@ -174,7 +175,7 @@ Analytics is the core of most data endeavors
     - similar to BI, but w/ different, often more demanding requirements
 
 Serving data for ML Considerations
-- Is the data suffiecient quality to perform relable feature engineering? Quality requirements and assessments are developed in close collab w/ teams consuming data? 
+- Is the data sufficient quality to perform reliable feature engineering? Quality requirements and assessments are developed in close collaboration w/ teams consuming data? 
 - Is the data discoverable? and data scientists and ML Engs easily find valuable data? 
 - Where are the technical and organization boundaries between data eng and ML eng? this question has significant architecture implications. 
 - Does the data set properly represent ground truth? is it biased? 
@@ -194,10 +195,10 @@ Security
 Data Mgmt
 - "Data management is the development, execution, and supervision of plans, policies, programs, and practices that deliver, control, protect, and enhance the value of data and information assets throughout their lifecycle."
 - facets of Data mgmt
-    - data governance, including accountabilty and discoverability 
+    - data governance, including accountability and discoverability 
         - ENsures quality, integrity, security and usability of the data
         - Metadata types for discoverability 
-            - Business metadata: the way the data is used in the business; including data defintions, data rules and logic, how and where data is used, and data owner
+            - Business metadata: the way the data is used in the business; including data definitions, data rules and logic, how and where data is used, and data owner
             - Technical metadata: describes te data created and used by systems across the Data eng lifecycle; includes data model and schema, data lineage, field mappings, and pipeline workflows. 
             - Operational metadata: operational results of various system and includes stats about the process, job ID, app runtime logs, data used in process and error logs
             - Reference metadata: used to classify or look up data including geo codes, internal codes, measurement units
@@ -209,7 +210,7 @@ Data Mgmt
             - Timeliness: Are records available in a timely fashion.
         - COnsider nuance
             - avoid misclassifying data
-    - data modeling and design: process for convering data into a usable frorm
+    - data modeling and design: process for converting data into a usable form
     - data lineage: describes the recording of an audit trail of data through its lifecycle, tracking systems and upstream data it depends on
     - storage and ops
     - data integration and interoperability: process of integrating data across tools and process
@@ -294,7 +295,7 @@ Service: is a set of functionality whose goal is to accomplish a task
 - Domains can contain many services; they may share services
 
 Use distributed systems to enable: 
-- scaling (horizontal and verticle)
+- scaling (horizontal and vertical)
 - Elasticity (scale dynamically) 
 - Availability
 - Reliability
@@ -311,12 +312,12 @@ Other considerations
 - User access: Single vs Multi tenant
 - Event driven architecture
 
-#### Examples 
+#### Examples
 
 Data Warehouse
 - Central data hub used for reporting and analysis
 - Highly formatted
-- Redshift, BigQuery, SNoflake, etc.
+- Redshift, BigQuery, Snowflake, etc.
 
 ![alt text](image-7.png)
 
@@ -371,7 +372,7 @@ Tactical plan for making technology choices once we have a strategic architectur
         - FinOps
     - Today vs Future; immutable vs transitory techs
         - recommend a 2 year time horizon to reevaluate tech choices
-    - location (on prem/cloud/hybrid/multicloud)
+    - location (on prem/cloud/hybrid/multi-cloud)
         - Don't use Big data tools if you don't need to
     - BUild vs buy
         - know the competitive advantage and where it makes sense to invest
@@ -417,7 +418,7 @@ Sources Systems
     - Webhooks
     - RPC and gRPC- remote procedure call
 - App DB: stores the state of an app; typically an online transaction processing (OLTP)
-    - Support for atmoic transaction is critical
+    - Support for atomic transaction is critical
         Atomic is a set of several changes that are committed as a unit
     - Others are consistency, isolation and durability
 - Online Analytical Processing systems
@@ -529,10 +530,10 @@ Data Engineering storage Abstractions
     - Purpose and Use case
     - Update patterns
     - Cost
-    - Separate storag and compute
+    - Separate storage and compute
 - Data Warehouse
     - Standard for OLAP architecture
-    - often used to organize data into a data lage
+    - often used to organize data into a data lake
 - Data Lake
     - unstructured
 - Data Lakehouse
@@ -556,19 +557,19 @@ Data Storage Lifecycle and Retention
 - Value of the data informs retention
 - Compliance
 
-
 ### Chapter 07: Ingestion
+
 - Key ENgineering Concepts for the ingestion Phase
     - What is the use case for the data I'm ingesting 
     - Can I reused this data and avoid ingesting multiple versions of the same dataset
     - where is the data going? What's the destination? 
     - What is the expected data volume? 
-    - What format is the data in? Can downstream storage and transformations accept this fomat? 
-    - Is the sources data in good share for immeditate downstreamuse? that is, is the data of good quality? WHat post-processing is required to service it? whar are data-quality resits (e.g. could bot traffic contaminate the data) 
+    - What format is the data in? Can downstream storage and transformations accept this format? 
+    - Is the sources data in good share for immediate downstream use? that is, is the data of good quality? WHat post-processing is required to service it? what are data-quality resits (e.g. could bot traffic contaminate the data) 
     - Does the data require in-flight processing for downstream ingestion if the data is from a streaming source?
 
 Factors to consider
-- Bounded vs unbouded data
+- Bounded vs unbounded data
     - assume all data is unbounded until it is bounded
     ![alt text](image-16.png)
 - frequency
@@ -641,7 +642,7 @@ DO not reinvent the wheel
 Moving data w/ Obj Storage
 - electronic data interchange (EDI) - Data movement method
 - DB and File exports
-- shell 
+- shell
 - ssh
 - SFTP and SCP
 - Webhooks
@@ -670,7 +671,7 @@ Queries
 - Transaction control language
     - COMMIT, ROLLBACK
 
-Life of a QUery
+Life of a Query
 ![alt text](image-21.png)
 
 QUery Optimizer
@@ -719,8 +720,8 @@ Data Modeling
 - avoid jumping into building data systems w/o a plan to organize data in a way that is useful
 - A data model represents the way data relates to the real world. It reflects how the data must be structured and standardized to best reflect your orgs' processes, definitions, workflows and logic
 ![alt text](image-30.png)
-    - Conceptual 
-        - contains business logic and rules and describes systems data suchas schema, tables and fields
+    - Conceptual
+        - contains business logic and rules and describes systems data such as schema, tables and fields
         - Entity relationship diagram
     - Logical
         - details how the conceptual model will be implemented in practice by adding significantly more detail
@@ -756,7 +757,7 @@ Techniques for modeling batch analytical data
     - Combined to make a star schema
 - Data vault
 ![alt text](image-32.png)
-    - separates structureal aspects of a source system's data from its attributes
+    - separates structural aspects of a source system's data from its attributes
     - load data into a handful of purpose built tables in an insert only manner
     - 3 types of tables
         - Hubs: stores business keys
@@ -775,11 +776,10 @@ Transformations
         - may be ephemerally or permanently stored
 - transforms rely on orchestration
 
-
 - Batch transforms: run on discrete chunks of data
-    - patterns: 
+    - patterns:
         - Distributed joins: we need to break a logical join into much smaller node joins that run on individual service in the cluster.
-        - Broadcast join: generally asymmetric w/ 1 large table deistributed across nodes and 1 small table that can easily fit on a single node. The query engine broadcasts the small table to all the nodes we it joins parts of the large table
+        - Broadcast join: generally asymmetric w/ 1 large table distributed across nodes and 1 small table that can easily fit on a single node. The query engine broadcasts the small table to all the nodes we it joins parts of the large table
         ![alt text](image-33.png)
         - Shuffle has join: if neither table is small enough to fit on a single node, the query engine will use shuffle hash
         ![alt text](image-34.png)
@@ -788,17 +788,17 @@ Transformations
     - SQL and Code-based transformation tools
         - SQL first class citizen
         - SQL declarative
-        - When to avoid SQL for batch transforms? 
-            - How difficult is it to code the transform in SQL? 
-                - The more complex, the more likely you should use code instead  
-            - How readable and maintainable will the resulting SQL be? 
+        - When to avoid SQL for batch transforms?
+            - How difficult is it to code the transform in SQL?
+                - The more complex, the more likely you should use code instead
+            - How readable and maintainable will the resulting SQL be?
             - Should some of the transformation code be pushed into a custom lib for further reuse across the org?
-                - SQL doesn't use libs 
+                - SQL doesn't use libs
     - Update Patterns
         - transforms often persist data in place, so updates can be a pain
         - Truncate and reload - clear the table of old data, and new output from transform is loaded.
-        - insert only: leave old records and insert new ones. 
-            - can maintain current view of data. 
+        - insert only: leave old records and insert new ones.
+            - can maintain current view of data.
             - downside is it is computationally expensive to find the latest record at query time
         - delete
             - In columnar data, deletes are more expensive than inserts
@@ -806,9 +806,9 @@ Transformations
             - soft delete marks record as deleted, but isn't
             - insert deletion: inserts a new record w/ delete flag to support Insert only update pattern
         - Upsert/merge
-            - takes a set of source records and looks for matches against a target table by using a primary key or other logical condition. 
+            - takes a set of source records and looks for matches against a target table by using a primary key or other logical condition.
             - When a match occurs, the targe record gets updated w/ new record
-            - if no match, a new record is created 
+            - if no match, a new record is created
             - huge performance impacts for columnar
     - Schema updates
         - easier to update schema than data in columnar
@@ -821,11 +821,11 @@ Transformations
         - viewed as powerful, but very rigid
 
 Materialized views, federation and query virtualization
-- Views: a DB object that we can select from a table. when we select a view, the DB creates a new query that combines the view's subquery with our query. 
+- Views: a DB object that we can select from a table. when we select a view, the DB creates a new query that combines the view's subquery with our query.
     - Help in security, create the view instead of added access to operator
     - Help w/ common access patterns
 - Materialized Views: does pre-computation that the regular view does not; sort of cached
-    - significant query optimiztion 
+    - significant query optimization
 - Composable Materialized views
     - In general, materialized views are not composable, but there can be now
 - Federated queries: DB feature that allows the OLAP db to select from an external data sources such as obj store or RDBMS
@@ -844,34 +844,94 @@ Materialized views, federation and query virtualization
 
 ### Chapter 09: Saving Data for Analytics, ML, and Reverse ETL
 
-COnsiderations for Serving Data
+Considerations for Serving Data
 - Trust: end users must trust the data they are receiving
-- What is the use case and who is the user? 
+- What is the use case and who is the user?
     - Who will use the data
-    - how will they use it? 
+    - how will they use it?
     - what do stakeholders expect
     - How can I collaborate w/ data stakeholders to understand how they data i'm working with will be used
 - Data product
     - Jobs to be done w/ data
     - considerations
-        - when someone uses the data product, what do they hope to accomplish? 
-        - will the data product serve internal or external users? 
+        - when someone uses the data product, what do they hope to accomplish?
+        - will the data product serve internal or external users?
         - what are the outcomes and ROI of the data product you are building?
 - Self-service or not
+    - How will user interface w/ your data products?
+    - Goal is to make data available and the user self serve
+- Data Definitions and Logic
+    - data definition is the meaning of the data as it is understood by the organization
+    - Data logic stipulates formulas for deriving metrics from data
 
+Analytics: Discovering, exploring, identifying, and making visible key insights and patterns within data
+- Business Analytics: uses historical and current data to make strategic and actionable decisions
+    - Dashboards, reports and ad hoc analysis
+- Operational Analytics: use data to make immediate actions
+    - Operational analytics versus business analytics = immediate action versus actionable insights
+    - time is the big difference
+- Embedded Analytics
+    - external facing, end user facing
+- Machine learning
+    - areas a data eng should be familiar with
+        - DIfference between supervised, unsupervised and semi-supervised learning
+        - difference between classification and regression techniques
+        - Various techniques for handling time-series data; including analysis and forecasting
+        - when to use classical techniques (logistic regression, tree-based learning, support vector machines) versus deep learning. Avoid jumping to deep learning when it is overkill
+        - When would you use automated ML vs handcrafting an ML Model? Tradeoffs?
+        - what data wrangling techniques used for structured and unstructured data
+        - all data that is used for ML is converted to numbers. ensure proper conversion
+        - how to encode categorical data and embeddings for various types of data
+        - DIfference between batch and online learning
+        - how does Data eng lifecycle intersect w/ ML at your company
+        - know when it is appropriate to train locally, on a cluster, or at the edge. GPU or CPU?
+        - Know the difference between the apps of batch and streaming data in training ML models
+        - What are data cascades and how might they impact ML models
+        - Are results real time or batch?
+
+Ways to serve data for analytics and ML
+- FIle exchange
+- Databases
+- Streaming systems
+- query Federation
+- Data Sharing
+- Semantic and Metrics layers
+    - metrics layer is a tool for maintaining and computing business logic
+    - semantic layer
+- Serving data in notebooks (like Jupyter)
+- Reverse ETL
+![alt text](image-38.png)
 
 
 ### Chapter 10: Security and Privacy
+People
+- Always be paranoid
 
+Processes
+- Security theater vs security habit
+    - avoid focus on compliance for compliance sake
+- Active security
+- Principle of least privilege
+- Shared responsibility in the cloud
+- Always back up your data
+
+Technology
+- Patch and update systems
+- Encryption
+    - at rest
+    - over the wire
+- logging, monitoring, and alerting
+    - Access, resources, billing, excess permissions
+- Network Access
 
 ### Chapter 11: The Future of Data Engineering
 
-
-## Appendix A:Serialization and Compression Technical Details
-
-
-## Appendix B: Cloud Networking
-
-
-## Index
-- 
+- Lifecycle isn't going away
+- Decline of complexity and rise of easy to use data tools
+- cloud scale data OS and improved interoperability
+- "Enterprisey" data engineering
+- Moving away from the modern data stack and toward the live data stack
+    ![alt text](image-39.png)
+    - Streaming pipelines and Real-Time Analytics
+- Fusion of data w/ Apps
+- Tight feedback between apps and ML
