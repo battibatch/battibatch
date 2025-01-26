@@ -50,12 +50,11 @@ Synthetic Data Case Studies
 - Very difficult to de-identify complex datasets
     - re-identification attacks are a thing
 
-
-### Synthetic Data Use Cases
-
 ## Chapter 02: Implementing Data Synthesis
 
 ### Data Synthesis Projects
+
+
 
 ### The Data Synthesis Pipeline
 
