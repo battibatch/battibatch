@@ -51,14 +51,60 @@ Synthetic Data Case Studies
     - re-identification attacks are a thing
 
 ## Chapter 02: Implementing Data Synthesis
+2 components to implement Data synthesis
+- Process
+    - steps and how to integrate synthesis in to a data pipeline
+- structure
+    would be operationalized through a synthesis center of excellence
 
 ### Data Synthesis Projects
+Steps
+![alt text](image-2.png)
+- Start w/ Real data
+- Synthesize
+- Utility assessment provide assurance to data consumers that the data utility is acceptable & build trust w/ synthesized data
+    - 2 stages
+        1. general purpose comparisons of parameters calculated from real and synth. i.e. comparisons of distributions and bivariate correlations. (smoke tests) 
+        2. Workload aware: analysis of synth data that are similar to the types of analysis that would be performed on real data
+- Privacy Assurance assessment: evaluates the extent real people can be matched to records in the synth data and how easy it would be to learn something new if matches are correct
 
+Data Preparation
+- Before synthesis, data likely needs to be prepped
+    - data Cleansing to remove errors in the data
+    - data Standardization to ensure that all fields are using consistent coding schemes
+    - data harmonization to ensure the data from multiple sources are mapped to the same data dictionary
+    - linking data from multiple sources
+        - it is not possible to link synthetic data b/c the synth data do not match real people
+    - data shaping
+        - i.e. attribute value pairs are difficult to work w/ in standard statistical analysis tools, and maybe reshaped to tabular
 
 
 ### The Data Synthesis Pipeline
+simple 1 line pipeline: 
+![alt text](image-3.png)
+
+Likely not that simple; 3rd parties involved
+![alt text](image-4.png)
+
+even more complex w/ multiple data sources
+![alt text](image-5.png)
+
+then, max complexity w/ multiple data sources & 3rd parties doing prep and synth
+![alt text](image-6.png)
+
+or just synth
+![alt text](image-7.png)
+
+pipeline will depend on
+- Number of data sources
+- costs and readiness of data analyst
+- availability of trusted 3rd parties
+- ability to implement automation 
+
 
 ### Synthesis Program Management
+
+
 
 ### Best Practices for implementing Data Synthesis
 
