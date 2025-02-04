@@ -243,7 +243,25 @@ but when the do not work well...
 
 It is not practical to generate 2 histograms for every variable and compare
 
+The Hellinger distance can be calculated to measure the difference in distribution between each variable between real and synthetic data
+* a probabilistic measure between 1 and 1 where 0 is not difference
+* one important advantage is it is bounded, making it easy to interpret
+* closer to 0, the better
+* it can also be computed for continuous and categorical variables
+* many vars can be represented in a box and whisker plot for a good summary
+
+![alt text](image-29.png)
+
+![alt text](image-30.png)
+
+First and second trials are basically identical
+
 ### Comparing Bivariate Stats
+The absolute difference in correlations between all var pairs in real and synthetic data can be computed as a measure of data utility. 
+* type of corelation coefficient will depend on types of vars
+    * continuous vars - Pearson correlation coefficient can be used
+    * continuous and nominal vars - multiple correlation coefficient
+    * continuous and dichotomous vars point biserial correlation is used
 
 ### Comparing Multivariate Prediction Models
 
