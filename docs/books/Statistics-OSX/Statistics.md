@@ -2,6 +2,9 @@
 
 ## Chapter 01: Sampling and Data
 
+- Data are individual items of info that come from a population or sample
+    - maybe qualitative(categorical), quantitative continuous or quantitative continuous
+
 ## Chapter 02: Descriptive Statistics
 
 ## Chapter 03: Probability Topics
