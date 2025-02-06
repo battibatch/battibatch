@@ -52,10 +52,146 @@ Know when to stop
 - move on and let code run for a bit
 
 ### Topic 06: Your Knowledge Portfolio
+KNowledge and experience are your most important assets
+- but they are expiring
+- knowledge becomes out of date
 
-### Topic 07:
+Keep a knowledge Portfolio
+1. invest regularly
+2. Diversify is key to long term success
+3. Balance between conservative and high risk investments
+4. buy low, sell high (learning emerging techs before they are popular)
+5. review and rebalance
+
+Goals
+- learn a new languages every year
+- read a tech book every month
+- Read nontech books
+- Take classes
+- Participate ion local meet ups 
+- experiment w/ different envs
+- stay current
+
+Critically analyze what you read and hear
+- Ask 5 whys (ask why 5 times)
+- Who does this benefit? 
+- WHat is the context
+- WHen and where would this work
+- Why is this a problem? 
+
+### Topic 07: Communicate
+English is jsut another programming language
+- Know your audience
+- KNow what you want to say, outline
+- CHoose you moment, not friday at 6pm
+- Choose a style, just the facts? hand holding?
+- Make it look good
+- Involve you audience
+- Be a listener
+- Get back to people
+
+It is both what you say and how you say it
+
+Build Documentation In, Don't Bolt it on
 
 ## Chapter 02: A Pragmatic Approach
+
+### Topic 08: The Essence of Good Design
+Good design is easier to change than Bad design
+- ETC: Easier to chage
+    - Decoupling is ETC
+    - Single responsibility is ETC
+
+ETC is value not a rule
+
+### Topic 09: DRY - the Evils of Duplication
+Don't Repeat Yourself
+- every piece of knowledge must have a single unambiguous, authoritative representation within a system
+- More than code
+    - Docs
+    - intent
+    - Data
+
+Make it easy to Reuse
+
+### Topic 10: Orthogonality
+2 lines are orthogonal if they meet at right angles.
+- In computing, it means independence or decoupling
+- changes to 1 thing do not impact the changes to another thing
+    - DB is orthogonal to the user interface
+
+Eliminate effects between unrelated things
+Benefits
+- Gain Productivity
+- Reduce Risk 
+
+Design things in layers
+![alt text](image.png)
+
+Don't rely on the properties of things you cannot control
+
+Be careful to preserve optionality when introducing 3rd party toolkits and libs
+
+Coding
+- Write shy code: do not reveal anything unnecessary to other modules
+- Avoid Global Data
+- Avoid similar functions
+
+Orthogonal systems are easier to test
+
+same for docs; be able to change appearance without changing content.
+
+### Topic 11: Reversibility
+
+Nothing is forever
+There are no final decisions, so make things easier to change
+- small components instead of monoliths
+- hide 3rd party API behind an abstraction layer
+
+Forgo following fads
+
+### Topic 12: Tracer Bullets
+In code, we look for something that gets us from a requirement to some aspect of the final system quickly, visibly and repeatably
+- Look for important requirements that define the system
+- look for areas where you have doubts and the biggest risks
+
+For example, ths system has 5 architecture layers and we have concerns about how they'd integrate, so we look for a simple feature that will exercise them together
+![alt text](image-1.png)
+
+Tracer code is not meant to be disposable
+
+Advantages
+- Users get to see something early
+- Devs build a structure to work in
+- You have an integration platform
+- You have something to demonstrate
+- You have a better feel for the process
+
+Tracers may miss
+
+Tracer code != prototyping
+- prototyping you are aiming to explore a specific aspect of the final system. You will kludge to see that aspect, and if it works, throw it away and do it properly
+    - disposable, reconn
+- tracer shows how the app as a whole hangs together
+    - lean but complete
+
+### Topic 13: Prototypes and Post-it Notes
+
+
+### Topic 14:
+
+### Topic 15:
+
+### Topic 16:
+
+### Topic 17:
+
+### Topic 18:
+
+### Topic 19:
+
+### Topic 20:
+
 
 ## Chapter 03: The Basic Tools
 
