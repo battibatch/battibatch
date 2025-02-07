@@ -192,6 +192,13 @@ Tracer code != prototyping
 
 ### Topic 20:
 
+### Topic 21:
+
+### Topic 22:
+
+### Topic 23:
+
+### Topic 24:
 
 ## Chapter 03: The Basic Tools
 
