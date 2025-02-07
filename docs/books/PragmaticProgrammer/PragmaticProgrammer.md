@@ -176,11 +176,49 @@ Tracer code != prototyping
     - lean but complete
 
 ### Topic 13: Prototypes and Post-it Notes
+what to prototypes? 
+- anything that carries risk
+- anything you haven't tries before
+- anything critical to the final system
+
+Prototype to learn
+- Architecture
+    - Are responsibilities of the major areas well defined and appropriate? 
+    - are the collaborations between major components well defined
+    - is coupling minimized
+    - can you ID potential sources od duplicating
+    - are interface definitions ans constraints acceptable
+    - does every module have an access path to the data it needs?
+- New functionality
+- structure of contents of external data
+- 3rd party tools or components
+- performance issues
+- user interface designs
+
+What can you ignore
+- correctness
+- completeness
+- robustness
+- style
+
+do not prototype if there is a culture of implementing the prototype; tracer bullet instead
 
 
-### Topic 14:
+### Topic 14: Domain Languages
+static vs dynamic typing
+early vs late binding
+functional vs OOO
 
-### Topic 15:
+always write code using the vocabulary of the application domain
+
+Program close to the problem Domain
+
+Trade off between internal and External languages
+- internal can take advantage of features of its host language
+    - but bound by syntax and semantics of host languages
+- external languages are not bound by syntax
+
+### Topic 15: 
 
 ### Topic 16:
 
