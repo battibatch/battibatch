@@ -258,13 +258,29 @@ Iterate the schedule w/ the code
 
 ## Chapter 03: The Basic Tools
 
-### Topic 16:
+Tools amplify talent
 
-### Topic 17:
+### Topic 16: The Power of Plain Text
 
-### Topic 18:
+Keep knowledge in Plain text
+- Insurance against Obsolescence 
+- every tool can operate on plain text
 
-### Topic 19:
+easier to test plain text 
+
+### Topic 17: Shell Games
+
+Use the Power of command shells
+make it your own
+
+### Topic 18: Power Editing
+
+Achieve Editor Fluency
+
+think, "There must be a better way to do this"
+
+### Topic 19: Version Control
+Use it
 
 ### Topic 20:
 
