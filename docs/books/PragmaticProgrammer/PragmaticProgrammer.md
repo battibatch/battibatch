@@ -218,7 +218,45 @@ Trade off between internal and External languages
     - but bound by syntax and semantics of host languages
 - external languages are not bound by syntax
 
-### Topic 15: 
+### Topic 15: Estimating
+
+Estimate to avoid surprises
+
+How accurate is accurate enough? 
+- duration is 1-15 days, quote estimate in Days
+- duration is 3-6 weeks, quote estimate in Weeks
+- duration is 8-20 weeks, quote estimate in months
+- duration is 20+ weeks, think hard before estimating
+
+Where do estimates come from
+- ask some one who has already done it. 
+- Understand what is being asked
+- Build a model of the system
+- Decompose the model into components
+    - Each component will have parameters
+- Give each Parameters a value
+- Calculate 
+
+Keep track of your estimation prowess and refine
+
+Estimate with a range of scenarios
+
+PERT
+- Program
+- Evaluation
+- Review
+- Technique
+Every PERT task as an optimistic, most likley, pessimistic estimate
+
+Best way to estimate, is to gain experience through incremental development
+- check requirements
+- analyze risk (prioritize riskiest first)
+- design, implement, integrate
+- Validate with users
+
+Iterate the schedule w/ the code
+
+## Chapter 03: The Basic Tools
 
 ### Topic 16:
 
@@ -237,8 +275,6 @@ Trade off between internal and External languages
 ### Topic 23:
 
 ### Topic 24:
-
-## Chapter 03: The Basic Tools
 
 ## Chapter 04: Pragmatic Paranoia
 
