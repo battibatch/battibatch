@@ -324,13 +324,77 @@ Learn text manipulation language
 - sed
 - perl
 
-### Topic 22:
+### Topic 22: Engineering Daybooks
+a kind of journal
+- what they did
+- things they learned
+- sketches of ideas
+- readings from metes
+- anything to do w/ work
 
-### Topic 23:
-
-### Topic 24:
+- take notes in meetings
+- variables values
+- reminders
+- doodles
 
 ## Chapter 04: Pragmatic Paranoia
+You cannot write perfect software
+
+### Topic 23: Design by Contract 
+Contract defines rights and responsibilities of all parties
+
+For software, that means
+- rights and responsibilities for modules 
+- Define Preconditions
+- Define Post conditions
+- Class invariants (state)
+
+Implement
+- enumerate the input domain range
+- what the boundary conditions are
+- what the routine promises to deliver
+- what the routine will not deliver
+
+Use Assertions (runtime checks) to check 
+
+### Topic 24: Dead Programs Tell No Lies
+If there is an error, there is an error
+
+Catch and release is for Fish
+- If you catch and exception, do something w/ it
+
+Crash Early; don't continue
+
+### Topic 25: Assertive Programming
+
+Use Assertions to prevent the impossible
+
+don't use in place of real error handling though
+
+Leave Assertions on
+- if there is a performance problem, only turn off the offender
+
+### Topic 26: How to Balance Resources
+
+Finish what you start
+- deal w/ allocated resources
+
+Act Locally
+- Deallocate in the opposite order you allocate
+- allocate the same set of resources in different places in the same order
+
+BUild code that checks that resources are freed appropriately
+
+### Topic 27: Don't Outrun your Headlights
+
+Take small steps - always
+Check for feedback, and adjust before the next step. 
+
+Avoid Fortune Telling
+
+### Topic 28: Decoupling
+
+### Topic 29:
 
 ## Chapter 05: Bend, or Break
 
