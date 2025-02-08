@@ -286,9 +286,43 @@ use branches for isolation
 
 Version Control as a Project Hub for a team
 
-### Topic 20:
+### Topic 20: Debugging
 
-### Topic 21:
+Debugging is just problem solving, not blame
+- Fix the problem, not the blame
+- Even for yourself
+- Don't Panic
+
+Always start w/ code built cleanly w/o warnings
+Gather all relevant data
+Reproduce the bug with a single command
+
+failing Test before fixing code
+- write the test first
+
+Read the damn Error message!! 
+
+Make sure it is not just a bad result
+Sensitivity to input values
+- binary chop the data until you find the offending input 
+
+Regression test across releases to make sure it is not reintroduced
+
+Add logging and tracing
+
+Rubber Ducking
+
+Remember the system is most likely not broken
+
+Don't Assume it - Prove it
+- prove your bug is fixed
+
+### Topic 21: Text Manipulation
+
+Learn text manipulation language
+- Awk
+- sed
+- perl
 
 ### Topic 22:
 
@@ -299,6 +333,7 @@ Version Control as a Project Hub for a team
 ## Chapter 04: Pragmatic Paranoia
 
 ## Chapter 05: Bend, or Break
+
 
 ## Chapter 06: Concurrency
 
