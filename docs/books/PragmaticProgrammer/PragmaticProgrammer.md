@@ -282,6 +282,10 @@ think, "There must be a better way to do this"
 ### Topic 19: Version Control
 Use it
 
+use branches for isolation
+
+Version Control as a Project Hub for a team
+
 ### Topic 20:
 
 ### Topic 21:
