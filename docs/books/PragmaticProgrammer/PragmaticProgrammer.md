@@ -393,8 +393,35 @@ Check for feedback, and adjust before the next step.
 Avoid Fortune Telling
 
 ### Topic 28: Decoupling
+coupling is the enemy of change
 
-### Topic 29:
+![alt text](image-2.png)
+
+Train wrecks - Chains of method calls
+Globalization - Dangers of static things
+    - Avoid global accessible data
+    - Includes singletons
+    - If it is important enough to be global, wrap it in an API
+Inheritance - why subclassing is dangerous
+
+Look for the signs
+- wacky dependencies between unrelated modules or libs
+- simple changes to one module that propagate through unrelated modules
+- devs who are afraid to change code b/c they aren't sure what might be affected
+- meetings where every one has to attend b/c no one is sure who will be affected
+
+Tell, don't ask
+- you shouldn't make decisions based on the internal state of an object
+
+Law of Demeter: says a method in C should only call: 
+- other instance methods in C
+- its parameters
+- Methods in objects that it creates, both on the stand and in the heap
+- Global variables
+
+
+### Topic 29: Juggling the Real World
+ 
 
 ### Topic 30:
 ### Topic 31:
