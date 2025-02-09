@@ -421,9 +421,25 @@ Law of Demeter: says a method in C should only call:
 
 
 ### Topic 29: Juggling the Real World
- 
+Events: the availability of information.
 
-### Topic 30:
+Strategies to write apps to respond to events
+- Finite State Machines
+    - a spec on how to handle events
+    - set of states
+    - Make a table
+        - Columns are events, rows are states
+        ![alt text](image-3.png)
+        - Intersection is actions
+- The Observer Pattern
+    - has a list source of events, the observable
+    - has a list of clients, the observers
+    - Can introduce performance bottleneck
+- Publish/Subscribe
+- Reactive Programming and Stream
+
+### Topic 30: Transforming Programming
+
 ### Topic 31:
 ### Topic 32:
 ### Topic 33:
