@@ -509,8 +509,9 @@ avoid non-atomic updates
 Problems can pop up any where resources are mutable:
 - files, DBs, external services, etc. 
 
-Random failures are ofthen concurrency issues. 
-### Topic 35:
+Random failures are of then concurrency issues. 
+
+### Topic 35: Actors and Process
 
 ### Topic 36:
 
