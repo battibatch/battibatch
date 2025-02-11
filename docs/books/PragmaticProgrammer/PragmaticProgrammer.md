@@ -392,6 +392,9 @@ Check for feedback, and adjust before the next step.
 
 Avoid Fortune Telling
 
+
+## Chapter 05: Bend, or Break
+
 ### Topic 28: Decoupling
 coupling is the enemy of change
 
@@ -463,15 +466,56 @@ Alternatives
     - Use Mixins to share functionality
 
 ### Topic 32: Configuration
+keep values that may change external to the app
+Parameterize you ap using external configuration
+- creds for external services
+- Logging levels and desitnations
+- port, IP, machine and cluster names
+- Env-specific validation parameters
+- externally set parameters, i.e. tax rates
+- site specific formatting details
+- license keys
 
+Static config - flat files, JSON, YAML
+Configuration as a Service - service API to access config
+- Multiple apps can share config info with auth and access control limiting 
+- config changes can be made globally
+- configuration data can be maintained via specialized UI
+- config data can become dynamic
+    - critical for HA
 
-
-### Topic 33:
-
-## Chapter 05: Bend, or Break
-
+Without external config, code is not adaptable
 
 ## Chapter 06: Concurrency
+everything is concurrent
+
+### Topic 33: Breaking Temporal Coupling
+aspects of time we care about
+- things happening at the same time
+- ordering or relative position of things in time
+
+analyze workflow to improve concurrency
+- create activity diagrams to maximize parallelism
+![alt text](image-4.png)
+
+concurrency is a software mechanism, and parallelism is a hardware concern.
+
+### Topic 34: Shared State is Incorrect state
+
+avoid non-atomic updates
+- a semaphore is a thing that only 1 person can own at a time
+    - create a semaphore, use it to control access to some other resource
+
+Problems can pop up any where resources are mutable:
+- files, DBs, external services, etc. 
+
+Random failures are ofthen concurrency issues. 
+### Topic 35:
+
+### Topic 36:
+
+### Topic 37:
+
 
 ## Chapter 07: While You are Coding
 
