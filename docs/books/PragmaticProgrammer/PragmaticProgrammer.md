@@ -439,9 +439,33 @@ Strategies to write apps to respond to events
 - Reactive Programming and Stream
 
 ### Topic 30: Transforming Programming
+all programs transform data, converting inputs to outputs; but we rarely think of it this way when we design apps
 
-### Topic 31:
-### Topic 32:
+Programming is about code, but programs are about data
+
+Don't hoard state, pass it around
+- think of data as the flow
+
+Never pass raw values between transformations; wrap in a data structure or type
+
+### Topic 31: Inheritance Tax
+
+inheritance is coupling
+- Child class to parent, parent's parent, etc.
+- code that uses child is couple to all the ancestors
+
+Alternatives
+- INterfaces and protocols
+    - Prefer interfaces to express polymorphism
+- Delegation
+    - Delegate to Services: Has-A trumps Is-A
+- Mixins and traits
+    - Use Mixins to share functionality
+
+### Topic 32: Configuration
+
+
+
 ### Topic 33:
 
 ## Chapter 05: Bend, or Break
