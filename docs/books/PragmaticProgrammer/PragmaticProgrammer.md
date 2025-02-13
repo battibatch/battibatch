@@ -512,13 +512,37 @@ Problems can pop up any where resources are mutable:
 Random failures are of then concurrency issues. 
 
 ### Topic 35: Actors and Process
+actor is an independent virtual processor with its own local and private state. Each actor has a mailbox. When a message appears in the mailbox and the actor is idle, it kicks into life and processes the message. When it finishes, it processes another message in the mailbox or it goes back ro sleep. 
+- when processing a message, an actor can create other actors, send messages to other actors and create a new state that will become the current state when the next message is processed
 
-### Topic 36:
+Process is a more general purpose virtual processor, often implemented by the Operating system to facilitate concurrency. Processes can be constrained to behave like actors
+
+Actors can only be concurrent
+- No single things is in control
+- the only state is help in messages and in the local state of an actor
+- all messages are 1 way;l there is not reply
+- an actor only process 1 message at a time, to completion. 
+
+### Topic 36: Blackboards
+another concurrency method
+features
+- no one needs to know the existence of any one else, they watch the board for info and add their findings
+- each person can be trained in different disciplines, the share a single desire only
+- each person comes and goes as needed
+- no restriction for what can go on the black board.  
+
+use blackboards to coordinate workflow
+
+## Chapter 07: While You are Coding
 
 ### Topic 37:
 
+### Topic 38:
 
-## Chapter 07: While You are Coding
+### Topic 39:
+
+### Topic 40:
+
 
 ## Chapter 08: Before the Project
 
