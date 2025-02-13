@@ -534,12 +534,46 @@ features
 use blackboards to coordinate workflow
 
 ## Chapter 07: While You are Coding
+Coding is not mechanical
 
-### Topic 37:
+### Topic 37: Listen to your lizard brain
+instincts are a response to patterns packed into our noncontagious brain
+- The trick is to notice it is happening, and then work out why
 
-### Topic 38:
+Fear the blank page
+- 2 reasons of this fear
+    - doubt 
+    - afraid to make a mistake
 
-### Topic 39:
+if code is harder than is should, something may be wrong
+- structure or design is wrong
+- solving the wrong problem
+
+stop and give yourself time and space to organize your brain
+- step away from code: take a walk, lunch, chat, doodle
+- You cannot force it
+- Create a comment describing in one sentence what you want to do or learn
+
+### Topic 38: Programming by coincidence
+be wary of drawing false conclusions
+Program deliberately
+
+close enough, isn't
+
+don't assume it, prove it. 
+
+How to program deliberately
+- always be aware of wha you are doing
+- Can you explain the code in detail to a Jr dev?
+- don't code in the dark; if you do not know why is works, you will not know why if fails
+- proceed from a plan
+- rely only on reliable things
+- document your assumptions
+- test your code and your assumptions
+- prioritize your effort; spend time on important aspects
+- Don't be a slave to history.
+
+### Topic 39: Algorithm speed
 
 ### Topic 40:
 
