@@ -575,12 +575,33 @@ How to program deliberately
 
 ### Topic 39: Algorithm speed
 
-### Topic 40:
+### Topic 41:
+
+### Topic 42:
+
+### Topic 42:
+
+### Topic 43:
+
+### Topic 44:
 
 
 ## Chapter 08: Before the Project
 
+### Topic 45:
+
+### Topic 46:
+
+### Topic 47:
+
+### Topic 48:
+
+
 ## Chapter 09: Pragmatic Projects
+
+### Topic 49:
+
+### Topic 50:
 
 ## Chapter 10: 
 
