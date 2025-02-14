@@ -651,11 +651,34 @@ create a culture of testing
 
 Test your software, or your users will
 
-### Topic 42:
+### Topic 42: Property based testing
+trust, but verify
+- unit tests test known knowns
 
-### Topic 43:
+use property-based tests to validate assumptions
+- properties are contracts and invariants
+- Create test data
 
-### Topic 44:
+### Topic 43: Stay Safe out there
+do not be careless
+be paranoid as spies and dissidents
+Get off the happy path
+
+Security basic principles
+1. minimize attach surface area
+    - code complexity leads to attack vectors
+    - input data must be validated
+    - avoid unauthed services
+    - keep authed user count as low as possible
+    - output data as attack vector (password is used by another user)
+    - debugging info has lots of info
+2. Principle of Least privilege
+3. secure defaults
+4. Encrypt sensitive data
+5. maintain secure updates
+
+### Topic 44: Naming things
+
 
 
 ## Chapter 08: Before the Project
