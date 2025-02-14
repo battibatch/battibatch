@@ -574,10 +574,82 @@ How to program deliberately
 - Don't be a slave to history.
 
 ### Topic 39: Algorithm speed
+most significant algorithms are not linear in scale or resources
 
-### Topic 41:
+Big O notation
+- O means "on the order of"
+- Puts an upper bound on the value of a thing we are measuring (time, memory, etc.) 
+- because the highest order term will dominate, reduce to only that term.
+- Big O will never given actual numbers
+![alt text](image-5.png)
 
-### Topic 42:
+Common sense estimations
+- SImple loops O(n)
+- Nested loops O(n^2)
+- binary chop O(lg n)
+- Divide and conquer O(nlg n)
+- Combinatoric (traveling salesmen, optimally packing items in a container)
+
+Estimate the order of your algorithms
+Then test your estimates
+
+make sure your algorithm is the problem before investigating it
+
+### Topic 40: Refactoring
+Software is more like gardening - organic
+- weeding things that do not work as planned
+- a certain routine is too large and should be split
+
+Refactoring is 
+- disciplined; not a free-for-all
+- external behavior does not change
+- do not add new features
+- low risk small steps
+- and exercise in pain mgmt
+
+When to refactor? 
+- Duplication
+- Non-orthogonal design
+- outdated knowledge or requirements
+- usage
+- performance
+- tests pass
+
+Refactor early, and often
+
+make sure you have good tests before you refactor
+
+### Topic 41: Test to Code
+Testing is not about finding bugs
+- benefits of testing happen when you think about and write the tests and when you run them
+
+Tests drive code; a test is the first user of your code
+
+TDD cycle
+1. decide on small piece of functionality you want to add
+2. write a test that will pass once that functionality is implemented
+3. run all tests, verify only the new tests fails
+4. write the smallest amount of code to pass the test; verify test passes
+5. refactor; verify
+
+Avoid
+- too much time ensuring 100% coverage
+- lots or redundant tests
+- bottom up designs
+    - Build end to end, not bottom up or top down
+
+write unit tests
+test Against contract
+design to test
+do ad hoc testing
+build a test window into deployments
+create a culture of testing
+    - test first is the best choice
+    - test during is a decent fallback
+    - test later == test never
+    - treat test code as prod code
+
+Test your software, or your users will
 
 ### Topic 42:
 
@@ -591,6 +663,7 @@ How to program deliberately
 ### Topic 45:
 
 ### Topic 46:
+
 
 ### Topic 47:
 
