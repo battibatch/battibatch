@@ -785,12 +785,43 @@ The real goal is to drive delivery time down to zero
 - deliver when users need it, continuous deployment
 
 ### Topic 51: Pragmatic Starter kit
+1. Version Control
+- drives builds, tests, releases
+2. Regression Testing
+- test early, often and automatically
+- code isn't done until test runs
+    - unit, integration, validations, performance
+    - testing the tests, use saboteurs
+- chaosmonkey
+- test state coverage, not code coverage
+- Find bugs once
+3. Full Automation
+- do not use manual procedures
+
+### Topic 52: Delight your users
+
+users are motivated by a business problem you can solve
+
+learn what the definition of success is in {day,week,month,year}
+- make sure every one is clear about expectations of value
+- when making decision, think about what moves closer to those expectations
+- critically analyze requirement with expectations in mind
+- continuously think about expectations 
 
 
-### Topic 52: 
+### Topic 53: Pride and Prejudice
+
+Sign your work
+do not shrink from responsibility
+
+code ownership can cause problems with cooperations
+- golden rule applies to code too
 
 
-### Topic 53: 
+## Postface
+first, Do not harm
+
+Don't enable scumbags
 
 
 
