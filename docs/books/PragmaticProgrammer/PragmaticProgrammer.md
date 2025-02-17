@@ -685,22 +685,112 @@ renaming is very hard
 
 ## Chapter 08: Before the Project
 
-### Topic 45:
+### Topic 45: The Requirements Pit
+No one knows exactly what they wan
 
-### Topic 46:
+Programmers help people understand what they want
+- do not take a clients' need as gospel, ask questions
+- look for edge cases
 
+Requirements are a process and learned in a feedback loop
+- help clients understand the consequences of their requirements
 
-### Topic 47:
+Work with a user to think like a user
 
-### Topic 48:
+policy is metadata, not requirements
 
+temper requirements with reality
+
+Requirement docs are not for clients
+- they take too long to create
+- client never reads them
+- They should be simple and short and steer devs
+
+Requirements are not architecture or design or UI
+- they are NEED
+
+Maintain a glossary
+
+### Topic 46: Solving Impossible Puzzles
+DOn't think out side the box, find the box
+- understand tht constraints
+- recognize the degrees of freedom
+- Categorize and prioritize your constraints
+
+Get out of your own way
+- take a break, let unconscious work it
+- rubber duck or explain to person
+
+Get lots of experience on lots of things to prepare for hard problems
+
+Don't Panic
+
+### Topic 47: Working Together
+
+work with, have discussions, take notes
+pair program
+- build code, not ego
+- start small
+- criticize code, not people
+- listen to others viewpoints, different isn't wrong
+- retrospectives
+
+Conway's Law - the solution looks a lot like the communication structure
+
+### Topic 48: The Essence of Agility
+Agile is not a noun; agile is how you do things
+- individuals and interactions over process and tools
+- working software over comprehensive documentation
+- customer collaboration over contract negotiation
+- Responding to change over following a plan
+
+There can never be an agile process
+- there is no single plan
+
+what do you do? 
+1. work out where you are
+2. make the smallest meaningful step towards where you want to be
+3. evaluate where you end up and fix anything you broke
+
+Agile drives design
+- make things easy to change
 
 ## Chapter 09: Pragmatic Projects
 
-### Topic 49:
+### Topic 49: Pragmatic Teams
+maintain small, stable teams
+- No broken windows - quality is a team issue
+- boiled frogs - people assume some one else is doing ti
+- Schedule your knowledge portfolio - if you are serious about improvement, schedule it. 
+- Communicate team presence
+    - Generate a team brand
+- DRY - instant and frictionless communication 
+- Team Tracer bullets - organize fully functioning teams
+- Automation to enable consistency
+- Know when to stop adding paint - give the team ability to shine in their own way
 
-### Topic 50:
+### Topic 50: Coconuts don't cut it
+cargo cult - imitating the form, but not the content
+    - plane made out of coconuts
 
-## Chapter 10: 
+i.e. scrum, but meeting weekly with monthly sprints
+
+Context matters
+- Do what works, not what is fashionable
+- do you have the skills/resources of spotify? 
+
+One size fits no one well
+
+The real goal is to drive delivery time down to zero
+- deliver when users need it, continuous deployment
+
+### Topic 51: Pragmatic Starter kit
+
+
+### Topic 52: 
+
+
+### Topic 53: 
+
 
 
