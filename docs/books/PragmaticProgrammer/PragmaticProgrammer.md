@@ -679,7 +679,9 @@ Security basic principles
 
 ### Topic 44: Naming things
 
+names reveal a lot about your intent and belief
 
+renaming is very hard
 
 ## Chapter 08: Before the Project
 
