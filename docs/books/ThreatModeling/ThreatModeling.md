@@ -71,8 +71,25 @@ Basic Design Patterns
 - Build in, not bolt on
 
 ## Chapter 01: Modeling Systems
+modeling = create an abstraction 
 
+types of models
+- Data flow diagrams
+    - have layers, top is L0
+    - AN element represents process or operating unit
+        - annotate each object w/ description and metadata
+            - i.e. name, owner, privilege level, language, etc.
+    - COntainers are a containing element
+    - external entity not in scope for the analysis
+        - i.e. web browser
+    - Actors are human users of the system
+    - Data store is where bulk of data is held
+        - annotate w/ data classification, sensitivity, protections, replication, backup.
 
+- sequence diagrams
+- Process flow diagrams
+- Attack Trees
+- Fishbone diagrams (cause and effect)
 
 ## Chapter 02: A Generalize Approach to Threat Modeling
 
