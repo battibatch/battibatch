@@ -203,6 +203,39 @@ Threat Intelligence Gathering
 - MITRE ATT&CK framework
 
 ## Chapter 03: Threat Modeling Methodologies
+3 stages
+1. No previous security goals and little knowledge
+2. a security champion is appointed
+3. all individuals own product security equally
+
+Adam Shostacks' 4 question framework
+1. What are we working on?
+2. What could go wrong?
+3. What are we going to do about it?
+4. Did we do a good job?
+
+How to translate a system into a model; 3 main approaches
+- system-centric approach (most prevalent in threat modeling)
+- Attack-centric approach
+- asset-centric approach
+
+STRIDE
+- Spoofing
+- Tampering
+- Repudiation
+- Information Disclosure
+- Denial of Service
+- Elevation of Privilege
+![alt text](image-4.png)
+![alt text](image-5.png)
+
+- You can also do STRIDE per element
+![alt text](image-6.png)
+
+PASTA
+- Process for Attach Simulation and Threat Analysis
+- Risk centric
+
 
 ## Chapter 04: Automated Threat Modeling
 
