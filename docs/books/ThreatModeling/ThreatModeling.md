@@ -147,10 +147,10 @@ types of models
 
 How to build System Models
 - ID major building blocks of the system
-    - APIs or UIs? 
-    - Listening on ports? 
-    - Databases and what comms w/ it? 
-    - Access control? 
+    - APIs or UIs?
+    - Listening on ports?
+    - Databases and what comms w/ it?
+    - Access control?
 - Iterated through every entity
 - Then choose an entity that has more detail that needs to be uncovered
 
@@ -165,13 +165,42 @@ Notes
 
 What does a good model look like? 
 - Accurate
-- Meaningful 
+- Meaningful
 - Representative
 - Living
 
-
-
 ## Chapter 02: A Generalize Approach to Threat Modeling
+Basic Steps
+1. ID objects in the system under consideration
+2. ID flows between those objects
+3. ID assets of interest
+4. ID system weaknesses and vulnerabilities
+5. ID threats
+6. Determine exploitablity
+
+What are you looking for in a system model? 
+- Means for an attack vector
+- Opportunity for an attacker to exploit
+- Motive for an attacker to conduct an attack against you
+
+The usual suspects
+- Non-secure protocols (http, ftp, telnet)
+- any process or data store w/o authentication
+- any process that fails to authz access to assets or functionality
+- any process w/o logging
+- sensitive assets in plain text
+- sensitive assets w/o integrity controls
+- incorrect use of cryptography
+    - hashing info that needs to be read or used in orginal form
+    - encrypting w/ symmetrical algorithm when key is on the same component as the data
+    - not using a secure random number generator
+    - homegrown crypto algorithm
+- Communication paths transiting a trust boundary
+
+**You will not find implementation flaws w/ Threat Modeling**
+
+Threat Intelligence Gathering
+- MITRE ATT&CK framework
 
 ## Chapter 03: Threat Modeling Methodologies
 
