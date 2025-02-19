@@ -7,7 +7,7 @@ Threat modeling is the process of analyzing a system to look for weaknesses that
 
 TM is a cyclic activity
 
-DOn't shift left, start left
+Don't shift left, start left
 
 Developing a secure system
 1. idea inception
@@ -75,6 +75,7 @@ modeling = create an abstraction
 
 types of models
 - Data flow diagrams
+    - shows interactions and intercommunications among system components
     - have layers, top is L0
     - AN element represents process or operating unit
         - annotate each object w/ description and metadata
@@ -85,11 +86,90 @@ types of models
     - Actors are human users of the system
     - Data store is where bulk of data is held
         - annotate w/ data classification, sensitivity, protections, replication, backup.
+    - Important Metadata
+        - Type of communication channel
+        - protocols
+        - data being communicated
+        - order of operations
+        - Arrows indicate direction of data flows
+            - decide if single line w/ double arrows or 2 line (one for each direction)
+        - Initiator mark can be helpful
+        - Focus on what is relevant for the analysis
+    - Trust Boundaries - Behind the curve is trusted
+        - Metadata defines what kind of trust (i.e. HTTPS)
+    - Interface elements for connection points, like ports or service endpoints
+        - Metadata is port number, communication channel, auth, etc.
+    - Blocks represent and architecture element that selectively alters the data flow
+        - metadata
+            - type of block
+            - Behavior
 
 - sequence diagrams
+    - shows a time or event based sequence of actions
+    - UML
+    - helps find logic flaws
+    - Components
+        - Actors
+        - Messages
+        - Conditional Logic
+        - Time
 - Process flow diagrams
+    - shows the sequence and directionality of flow of operations through the system
+    - higher level than sequence diagrams
+    - not common in threat modeling
 - Attack Trees
-- Fishbone diagrams (cause and effect)
+    - useful in understanding how a system is vulnerable by modeling how an attacker may influence a system (attacker centric approach) 
+    - Each node is labeled with an action to be taken and should include information such as
+        - Difficulty in performing the action to accomplish the parent nodes goal
+        - cost
+        - required special knowledge or conditions
+        - other relevant info
+    - Valuable for threat analysis
+    - To construct an attack tree:
+        1. ID a target for an attack
+            - "perform RCE"
+        2. ID actions to achieve the target
+            - modify memory
+            - deliver executable payload to {stack,heap}
+            - etc.
+        3. rinse and repeat
+            - don't worry about feasibility; focus on possibility
+    ![alt text](image-2.png)
+- Fishbone diagrams
+    - cause and effect diagrams
+    - used for root cause analysis of a problem statement
+    - can help find weakness in a system
+    - to construct
+        - define what you want to model
+        - then ID a set of primary causes that lead to the models effect
+        - then define causes of the effects
+    ![alt text](image-3.png)
+
+How to build System Models
+- ID major building blocks of the system
+    - APIs or UIs? 
+    - Listening on ports? 
+    - Databases and what comms w/ it? 
+    - Access control? 
+- Iterated through every entity
+- Then choose an entity that has more detail that needs to be uncovered
+
+Notes
+- Timing is important; you need something to model
+- different stakeholders will see different things
+- Loose ends are OK
+- Iterative approach
+- establish blame free
+- No surprises - be up front with goals
+- Training and be prepared
+
+What does a good model look like? 
+- Accurate
+- Meaningful 
+- Representative
+- Living
+
+
 
 ## Chapter 02: A Generalize Approach to Threat Modeling
 
