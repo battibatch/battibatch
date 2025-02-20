@@ -235,11 +235,87 @@ STRIDE
 PASTA
 - Process for Attach Simulation and Threat Analysis
 - Risk centric
+![alt text](image-7.png)
+![alt text](image-8.png)
+- 7 stage process to quantify the impact to an app
+    1. Define business obj
+        - Business requirement
+        - security and compliance requirement
+        - Perform preliminary business impact assessment
+        - define risk profile
+    2. Define technical scope
+        - software components
+        - ID actors and data sources (created, sinks and stored)
+        - system level services
+        - third party infrastructures
+        - assert complexness of secure tech design
+    3. Decompose the app
+        - enumerate all app use cases
+        - construct DFD
+        - perform security functional analysis
+    4. Perform threat analysis
+        - analyze overall threat scenario
+        - gather threat intel from internal,external sources
+        - update threat libs
+        - map threat agents to assets mapping
+        - assign probities to id'ed threats
+    5. Detect vulnerabilities
+        - review and correlate existing vulnerability data
+        - ID weak design patterns in architecture
+        - map threats to vulnerabilities
+        - conduct targeted vulnerability testing
+    6. Enumerate Attacks
+        - update attack lib and vectors and control framework using the latest threat intel sources (CISA) 
+        - ID the attack surface
+        - analyze id'ed attack scenarios
+        - assess the probability and impact of each scaron
+        - derive a set of cases to test existing countermeasures
+    7. Perform risk and impact analysis
+        - determine risk of each threat
+        - ID countermeasures
+        - calculate residual risks
+        - recommend a strategy to manage residual risk
+- RACI is different for every stage
+![alt text](image-9.png)
+![alt text](image-10.png)
+
+TARA
+- Threat Assessment and Remediation Analysis
+- Developed by MITRE, use in many military applications
+- Cyber threat susceptibility assessment (CTSA) creates a table mapping tactics, techniques and procedures (TTPs)
+    - the target TTP name 
+    - reference source for the ttp
+    - Plausibe? 
+    - Rational?
+- Features 
+    - can perform TARA on deployed or systems still in acquisition
+    - use of stored catalogs or TTM and countermeasure (CMs) promote consistency
+    - TTP and CM catalog data is derived from opensource and classified sources
+    - not a 1 size fits all; level of effort can be adjusted
+    - toolset provided default scoring tools 
+![alt text](image-11.png)
+![alt text](image-12.png)
+
+TRIKE
+- stands out by trying to generate threats semiautomatically
+- but pretty out of date 
+- Phases
+    - requirements model
+    - Implementation model 
+    - threat model 
+    - risk model 
+![alt text](image-13.png)
+![alt text](image-14.png)
+
+Specialized Methodologies
+- LINDDUN
+    - linkability 
+
 
 
 ## Chapter 04: Automated Threat Modeling
 
-## Chapter 05: COntinuous Threat Modeling
+## Chapter 05: C0ntinuous Threat Modeling
 
 ## Chapter 06: Own Your ROle as a Thread Modeling Champion
 
