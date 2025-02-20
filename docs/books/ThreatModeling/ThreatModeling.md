@@ -328,6 +328,18 @@ Specialized Methodologies
     - very rigid
 
 ## Chapter 04: Automated Threat Modeling
+threat modeling the traditional way is hard
+- highly specialized talent is required
+- there is a lot to know
+- too many options
+- hard to convince stakeholders
+    - every one is buy
+- time and effort
+
+2 approaches
+- Threat modeling from code - DSL 
+    - Threatspec
+- Threat modeling with code - program to interpret info
 
 ## Chapter 05: Continuous Threat Modeling
 
