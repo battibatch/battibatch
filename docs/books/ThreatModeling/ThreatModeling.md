@@ -308,14 +308,28 @@ TRIKE
 ![alt text](image-14.png)
 
 Specialized Methodologies
-- LINDDUN
-    - linkability 
-
-
+- LINDDUN - focused on data subjects' privacy
+    - linkability
+    - identifiability
+    - non repudiation
+    - detectability
+    - disclosure of info
+    - unawareness
+    - noncompliance
+- SPARTA
+    - Security and Privacy Architecture through Risk driven threat assessment
+    - a GUI tool for DFD creation
+    - Uses FAIR and adds Monte Carlos simulations for each risk from FAIR
+- INCLUDES NO DIRT
+    - STRIDE + LINDDUM + C + O
+        - Clinical Error
+        - Over Use
+    - Choose your own adventure style process flow
+    - very rigid
 
 ## Chapter 04: Automated Threat Modeling
 
-## Chapter 05: C0ntinuous Threat Modeling
+## Chapter 05: Continuous Threat Modeling
 
 ## Chapter 06: Own Your ROle as a Thread Modeling Champion
 
