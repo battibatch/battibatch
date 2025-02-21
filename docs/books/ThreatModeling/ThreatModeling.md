@@ -420,8 +420,9 @@ encourage exploration of these questions
 Threat model every story
 Secure Developer Checklist
 https://github.com/Autodesk/continuous-threat-modeling/blob/master/Secure_Developer_Checklist.md
+https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/02-checklist/05-checklist
 
 
 ## Chapter 06: Own Your Role as a Thread Modeling Champion
-
+Simple questions, like "how do I convince leadership"
 
