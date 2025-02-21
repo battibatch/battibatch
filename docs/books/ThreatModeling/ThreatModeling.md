@@ -373,9 +373,55 @@ threat modeling the traditional way is hard
 - Look at AI/ML now
 
 ## Chapter 05: Continuous Threat Modeling
+guiding principles
+- product team will always know its own system better than a security expert
+- a team cannot be expected to stop to engage in threat modeling
+- and individualized increasing returns learning curve replaces training
+    - quality of the model grow with experience
+- the state of the threat model myst reflect the stat of the system
+- finding must match; be useful
+
+Autodesk Continuous Threat Modeling Methodology
+- Handbook - 5years old 
+
+How often do living does need to breathe? 
+- change only on security notable events or changes
+
+Build a baseline
+- Define the scope
+- ID important assets
+- draw diagrams
+- draw DFDs
+- Mark where the important data lives, transits and transforms
+
+start w/ L0 and evolve into more detailed L1 DFD
+DFD Checklist
+1. complete diagram, including deployment
+2. label each component
+3. label each direction of each data flow w/ arrows
+4. label actions for each arrow
+5. label the protocol
+6. label the trust boundary
+7. label main types of data and how they flow
+8. describe personas
+9. label auth process
+10. label authz process
+11. labe order of action numerically
+12. labe crown jewls
+
+Leading questions for each subject
+![alt text](image-15.png)
+![alt text](image-16.png)
+![alt text](image-17.png)
+![alt text](image-18.png)
+![alt text](image-19.png)
+encourage exploration of these questions
+
+Threat model every story
+Secure Developer Checklist
+https://github.com/Autodesk/continuous-threat-modeling/blob/master/Secure_Developer_Checklist.md
 
 
-
-## Chapter 06: Own Your ROle as a Thread Modeling Champion
+## Chapter 06: Own Your Role as a Thread Modeling Champion
 
 
