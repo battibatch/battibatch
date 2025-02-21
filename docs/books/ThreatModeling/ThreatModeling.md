@@ -349,10 +349,32 @@ threat modeling the traditional way is hard
         - makes docs easier
         - connects w/ other security tools for orchestration
 - Threat modeling with code - program to interpret info
+    - Architecture Analysis and Design Language (AADL) (paid)
+    - Acme description language (free)
+    - Others
+        - Common information model (CIM) 
+        - Unified modeling language (UML)
+        System modeling language (SysML)
+    - OWASP pytm
+        - Like others, but python
+        - can make DFD, sequence anf reports
+    - Threagile
+        - Tool in Go, define in YAML
+        - does lots of reporting
+- Others
+    - IriusRisk
+    - SD Elements
+    - ThreatModeler
+    - OWASP ThreatDragon
+    - Microsoft Threat Modeling Tool
+    - CAIRIS
+    - Tutamen Threat Model Automator
 
-
+- Look at AI/ML now
 
 ## Chapter 05: Continuous Threat Modeling
+
+
 
 ## Chapter 06: Own Your ROle as a Thread Modeling Champion
 
