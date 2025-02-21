@@ -339,7 +339,18 @@ threat modeling the traditional way is hard
 2 approaches
 - Threat modeling from code - DSL 
     - Threatspec
+        - does require code to exist; but does not perform analysis
+        - uses code annotations
+        - allows org to define common lexicon of threats and other structures
+        - facilitates security discussion
+        - auto generates details and useful docs
+    - ThreatPlaybook
+        - DevSecOps framework for threat modeling and app security test automation
+        - makes docs easier
+        - connects w/ other security tools for orchestration
 - Threat modeling with code - program to interpret info
+
+
 
 ## Chapter 05: Continuous Threat Modeling
 
