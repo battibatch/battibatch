@@ -1,9 +1,9 @@
-# Threat Modeling: A Practical Guide 
+# Threat Modeling: A Practical Guide
 Tarandach, Izar; Coles, Matthew
 2020
 
 ## Introduction
-Threat modeling is the process of analyzing a system to look for weaknesses that come from less desirable design choices. 
+Threat modeling is the process of analyzing a system to look for weaknesses that come from less desirable design choices.
 
 TM is a cyclic activity
 
@@ -21,11 +21,11 @@ Terminology
 ![alt text](image.png)
 - Weakness is an underlying defect that modifies behavior or functionality or allows incorrect access to data
 - Exploitability is a measure of how easy an attacher can make use of a weakness to cause harm
-- Vulnerability is a when a weakness is exploitable 
+- Vulnerability is a when a weakness is exploitable
 - Severity is the damage potential from an defect
     - part art, part science
-- Impact is measure of loss of functionality or data 
-- Actor is any individual associated w/ the system 
+- Impact is measure of loss of functionality or data
+- Actor is any individual associated w/ the system
 - Threat is the result of an actor taking advantage of a vulnerability
 - Threat event is a success exploitation of a vulnerability
 - Loss is when 1 or more impacts happen b/c of threat event
@@ -60,7 +60,7 @@ Fundamental Controls
 Basic Design Patterns
 - Zero Trust - Verify trusted every time
 - Design by Contract
-- Least Privilege 
+- Least Privilege
 - Defense in Depth
 - KISS
 - No Secret sauce - do not rely on "security by obscurity"
@@ -71,7 +71,7 @@ Basic Design Patterns
 - Build in, not bolt on
 
 ## Chapter 01: Modeling Systems
-modeling = create an abstraction 
+modeling = create an abstraction
 
 types of models
 - Data flow diagrams
@@ -118,7 +118,7 @@ types of models
     - higher level than sequence diagrams
     - not common in threat modeling
 - Attack Trees
-    - useful in understanding how a system is vulnerable by modeling how an attacker may influence a system (attacker centric approach) 
+    - useful in understanding how a system is vulnerable by modeling how an attacker may influence a system (attacker centric approach)
     - Each node is labeled with an action to be taken and should include information such as
         - Difficulty in performing the action to accomplish the parent nodes goal
         - cost
