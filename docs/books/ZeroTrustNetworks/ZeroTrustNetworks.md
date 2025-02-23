@@ -38,12 +38,26 @@ before starting w/ ZTA, you must know where trust lies in apps
 
 ZTA does not use walls like perimeter
 3 key ZTA components
-- User/appp Auth and authz
+- User/app Auth and authz
 - device auth and authz
 - trust score - computed
 
 
 ## Chapter 02: Managing Trust
+
+operator to manage trust
+![alt text](image-7.png)
+
+Threat models are great to start w/ for ZTA
+Categories of attacker listed in increasing capabilities
+1. opportunistic attackers
+2. targeted attackers
+3. insider threats
+4. Trusted Insider
+5. State level actor
+6 
+
+
 
 ## Chapter 03: COntext Aware Agents
 
