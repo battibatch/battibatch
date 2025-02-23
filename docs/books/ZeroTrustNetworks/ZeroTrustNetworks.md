@@ -55,11 +55,33 @@ Categories of attacker listed in increasing capabilities
 3. insider threats
 4. Trusted Insider
 5. State level actor
-6 
+
+ZTA's Threat model
+- RFC 3552 describes the internet threat model; ZTA follows
+- ZTA does not defend against everything, by types of adversaries that are common in hostile networks
+
+Strong authentication is required
+- X.509, TLS/SSL
+![alt text](image-8.png)
+- Certs are not enough
+    - Public Key Infrastructure (PKI) like Certificate authorities (CA)
+    - Provides identity through the ZTA network for
+        - devices, users, apps
+- Public PKI is not recommended for ZTA
+    - hard to fully trust public infra
+    - Better than nothing
+        - Automate to improve
+- Least privilege
+- Dynamic trust
+    - pools of trust, like VPN access are not great
+![alt text](image-9.png)
+    - Trust score challenges
+        - can an attacker increase their score over time 
+    - policy on the control plane to limit data access and bandwidth
+    ![alt text](image-10.png)
 
 
-
-## Chapter 03: COntext Aware Agents
+## Chapter 03: Context Aware Agents
 
 ## Chapter 04: Making Authorization Decisions
 
