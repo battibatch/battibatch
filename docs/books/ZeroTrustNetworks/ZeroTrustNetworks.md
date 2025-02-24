@@ -91,7 +91,7 @@ ZTA recognize the combo in the request
 
 Some fields of the agent are available specifically to mitigate against active attack, and thus change quickly
 Agent Data fields examples
-- agent trust scoew
+- agent trust score
 - user trust score
 - user role or entitlements
 - user groups
@@ -114,11 +114,37 @@ Agents need to be fluid and rigid at the same time
 - Standardize data format for an agent
     - Simple Network Mgmt protocol (SNMP)
 ![alt text](image-11.png)
+- There is no OID equivalent for private IPs
 
-
-
+Agent standardization is an implementation task
+- JWT is common
 
 ## Chapter 04: Making Authorization Decisions
+AuthZ is the most important ZTA process
+ZTA Authz has 4 components
+![alt text](image-12.png)
+- enforcement
+    - Front line
+    ![alt text](image-13.png)
+- policy engine
+    - has the power to make the decision
+    - has storage for the rules; must be version controlled
+    - ZTA policy is not standardized
+        - best practice is to define in terms of logical network components (services, device endpoint classes, user roles)
+    - Typically JSON or YAML 
+- trust engine
+    - system that performs risk analysis against a particular request or action
+    - What entities should be scored?
+        - Network agents
+        - Devices
+- data stores
+    - Used to make authz decisions, the source of truth for current and past states of the system
+![alt text](image-14.png)
+
+![alt text](image-15.png)
+![alt text](image-16.png)
+![alt text](image-17.png)
+
 
 ## Chapter 05: Trusting Devices
 
