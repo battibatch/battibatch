@@ -82,6 +82,41 @@ Strong authentication is required
 
 
 ## Chapter 03: Context Aware Agents
+An Agent is a combination of data known about the actors in the request
+- user
+- device
+- app
+
+ZTA recognize the combo in the request
+
+Some fields of the agent are available specifically to mitigate against active attack, and thus change quickly
+Agent Data fields examples
+- agent trust scoew
+- user trust score
+- user role or entitlements
+- user groups
+- user location
+- user auth method
+- device trust score
+- device manufacture
+- host Operating system
+- hardware security module
+- trusted platform module 
+- device location
+- IP Address
+
+the agent is what is authz'ed in ZTA 
+NOTE the agent is not for authentication; auth is prereq to agent authz
+- If compromised, revoke authz first, then creds
+
+Agents need to be fluid and rigid at the same time
+- like a DB schema
+- Standardize data format for an agent
+    - Simple Network Mgmt protocol (SNMP)
+![alt text](image-11.png)
+
+
+
 
 ## Chapter 04: Making Authorization Decisions
 
