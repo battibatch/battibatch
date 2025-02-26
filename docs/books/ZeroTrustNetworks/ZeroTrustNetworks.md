@@ -145,8 +145,35 @@ ZTA Authz has 4 components
 ![alt text](image-16.png)
 ![alt text](image-17.png)
 
-
 ## Chapter 05: Trusting Devices
+trusting devices is critical
+
+Bootstrapping Trust
+- golden images
+- certify what software is running on the device
+
+Generating and Securing Identity
+- Signed certificates for the device
+- HSM or TPM
+
+automate the provisioning of a new device when possible
+but with human is involved, use TOTP
+![alt text](image-18.png)
+
+Authenticating Control Plane devices
+- X.509 is the standard
+    - Note OU has be deprecated
+    - Storing the private key can be a challenge
+- TPMs
+![alt text](image-19.png)
+    - TPMs is good, but cumbersome and slow and cannot be used for TLS
+    - Cannot be used for remote attestation
+    - attack vectors
+        - ROCA - calculated the endorsement key (EK) 
+        - SIde-channel - physical attack to obtain EK by measuring the electrical characteristics of TPM
+        - Fault injection
+    
+
 
 ## Chapter 06: Trusting Identities
 
