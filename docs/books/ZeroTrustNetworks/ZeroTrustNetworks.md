@@ -253,8 +253,35 @@ SSO
 See something, Say something
 - be an active participant of the security of the organization
 
-
 ## Chapter 07: Trusting Applications
+trusted device is a prereq to trusting code it will run
+
+to establish trust
+- people producing code are trusted
+- secure coding practices are followed
+- code is scanned for vulnerabilities
+- trusted apps are properly designed
+- trusted app are properly deployed
+- continuous monitoring
+
+Know the app pipeline
+- dependencies, SBOMs
+- NIST Secure software development Framework
+![alt text](image-21.png)
+- Secure the repo
+- Audit trails
+- Code reviews
+- signed commits
+- Reproducible Builds
+- decouple release and artifact
+- trusted the software distro network
+- SAST and DAST
+- Confidential computing
+    - create a trusted execution environment
+- COntinuos Improvement
+- Continuous QA
+
+
 
 ## Chapter 08: Trusting Traffic
 
