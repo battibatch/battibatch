@@ -217,6 +217,42 @@ Using Device Data for User Authz
     - Machine Learning
 
 ## Chapter 06: Trusting Identities
+user trust is not the same as device trust
+
+Identity Authority
+- informal identity: good only in small groups
+- Authoritative identity: Enterprise
+
+Bootstrapping ID in a private system
+- Gov issued IDs
+- In person is best, but remote can be done
+
+Storing ID
+- User directories
+    - requires maintenance
+
+When to Authenticate
+- Avoid constant auth
+- Auth for trust
+    - use trust score to determine further auths
+- Use multi channels
+    - push notifications, 1 time codes, etc. 
+- Cache the sessions
+
+How to Auth ID? 
+- something they know (password)
+- something they have (Badge, TOTP)
+- something they are (biometrics)
+- behavioral (ML to analyze how they type)
+
+SSO
+- SAML
+- OAuth
+- OpenID Connect
+
+See something, Say something
+- be an active participant of the security of the organization
+
 
 ## Chapter 07: Trusting Applications
 
