@@ -172,8 +172,49 @@ Authenticating Control Plane devices
         - ROCA - calculated the endorsement key (EK) 
         - SIde-channel - physical attack to obtain EK by measuring the electrical characteristics of TPM
         - Fault injection
-    
 
+Inventory management
+![alt text](image-20.png)
+
+Knowing what to expect in a ZTA
+- trusted entities can psh expectations into the system
+- inventory Database helps
+- servers are easy, clients are hard
+    - client certs help
+
+Secure Introduction of a new device is precarious
+- 1st system is important
+- what makes a good, secure intro system? 
+    - Single user creds
+    - short lived creds
+    - 3rd party to enable separation of duty
+
+Renewing and measuring device trust
+- Local measurement
+    - software measurement is less secure and less reliable, but unlimited
+    - hardware measurement is better, but limited in capability
+- Remote Measurement
+    - better than local, b/c it enables separation of duties
+- Unified endpoint Management
+    - software based remote Mgmt
+- continuous monitoring is critical
+
+Software config Mgmt
+- puppet, ansible, Chef, etc.
+- helps manage change to devices
+- focused on security of software running on devices
+- Use CM based inventory
+    - can be searchable
+    - Enables secure source of truth
+
+Using Device Data for User Authz
+- Auth has happened successfully
+- Trust Signals
+    - time since image: over time, compromise increases
+    - Historical access
+    - Location
+    - Network Comm Patterns
+    - Machine Learning
 
 ## Chapter 06: Trusting Identities
 
