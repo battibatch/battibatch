@@ -281,9 +281,38 @@ Know the app pipeline
 - COntinuos Improvement
 - Continuous QA
 
-
-
 ## Chapter 08: Trusting Traffic
+traditional network filtering still has a place in ZTA
+
+Encryption vs Auth
+- Encryption enables confidentially
+- auth enables a receiver to validate the identity
+- encryption is possible w/o auth, but bad practice. 
+- important aspects
+    - Secure key Management
+    - forward secrecy: ensure the compromise of a single key doesn't compromise all comms
+    - MFA
+    - postquantum crypto
+- Auth w/o Encryption? 
+    - bad practice
+    - use encryption every where
+
+Bootstrapping trust
+- first packet is hard b/c no truste
+- mitigate w/ pre-auth
+    - receiver is waiting on signed UDP packet
+    - UDP doesn't expect a response
+    - Single packet auth (SPA)
+    - Firewall Knock Operator (fwknop)
+        - OSS tool uses SPA and integrates w/ firewalls
+        - Short lived exceptions created in firewall
+        - SPA payload
+            - 16 byte of random, local username, timestamp, fwknop version, SPA message types, access request, SPA Message digest
+        - can use HMAC or other encryption
+
+WHere should ZTA be in the network model? 
+- TLS or IPsec
+
 
 ## Chapter 09: Realizing a Zero Trust Network
 
