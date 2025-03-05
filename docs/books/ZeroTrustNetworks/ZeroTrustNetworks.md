@@ -312,9 +312,78 @@ Bootstrapping trust
 
 WHere should ZTA be in the network model? 
 - TLS or IPsec
+- IPsec lacks popularity
+    - Network support
+        - New protocols' packets are hard to get transmitted
+    - Device Support
+        - IPsec standard is complex
+        - requires active configuration
+    - App Support
+        - kernal support required
+- For client/server - TLS is better
+- for server/server - IPsec is better
+- microsoft servers can user IPsec
+- mutually authenticated TLS (mTLS)
+![alt text](image-22.png)
 
+- For ZTA, separate duty of encryption from app itself
+![alt text](image-23.png)
+- a symmetric key can be used for bulk transfers
+![alt text](image-24.png)
+- Message authenticity is needed
+    - MD5 or SHA 
+
+- mTLS for device auth
+    - pros and cons; but best choice for protecting client facing ZTA networks
+
+Trusting cloud trafficL challenges and Considerations
+- Compliance and Security
+- cyber threats
+- network visibility
+- diversity of cloud providers
+- cost
+- measures you should take
+    - ensure standards are met
+    - monitor networks
+    - use latest security protocols
+    - MFA
+    - conduct audits and pen testing
+    - IDS and IPS systems
+    - access control policies
+    - patch systems
+    - monitor access
+    - implement Incident response
+
+Cloud Access Security Brokers (CASBs) and ID federation
+- usually a proxy between org's networks and provider
+- capabilities
+    - data loss prevention
+    - threat detection and remediation
+    - encryption and data integrity
+    - enforcing auth policies
+
+Filtering is process packets are admitted or rejected
+- host filtering
+    - iptables, App firewalls, windows firewall
+    - reduce the attack surface by filtering traffic
+    - meaningless if host is compromised
+    ![alt text](image-25.png)
+
+- Bookended filtering
+    - filter not just on recipient, but also while sending
+    - not common on traditional networks
+    - rarely used in private networks b/c
+        - ingress filter is easier, and good enough
+        - egress filtering requires knowledge of every expected flow
+        ![alt text](image-26.png)
+- intermediary filtering
+    - idea that devices other than sender/receiver should participate in filtering
+        - perimeter
+        - dynamically program the network
+        - software defined network (SDN)
 
 ## Chapter 09: Realizing a Zero Trust Network
+
 
 ## Chapter 10: The Adversarial View
 
