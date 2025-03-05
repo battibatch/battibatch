@@ -383,6 +383,24 @@ Filtering is process packets are admitted or rejected
         - software defined network (SDN)
 
 ## Chapter 09: Realizing a Zero Trust Network
+embrace "never trust, always verify"
+
+1. understand your current network
+    - choose scope
+    - assessment and planning
+    - what is actually required? author recommends
+        - all networks flows must authenticate before processing
+        - all network flow should be encrypted
+        - auth and encryption must be performed by the endpoints in the network
+        - system access should be enforced by all enumerating all network flows
+        - strongest auth and encryptions should be used
+        - auth should not rely on public PKI providers
+        - devices should be regularly scanned, patched, rotated
+    - Build a System Diagram
+    ![alt text](image-27.png)
+    - Understand flows
+        - wireshark, AWS Flow logs, and other tools
+    - micro-segmentation
 
 
 ## Chapter 10: The Adversarial View
