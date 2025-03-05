@@ -401,7 +401,7 @@ embrace "never trust, always verify"
     - Understand flows
         - wireshark, AWS Flow logs, and other tools
     - micro-segmentation
-
+    210
 
 ## Chapter 10: The Adversarial View
 
