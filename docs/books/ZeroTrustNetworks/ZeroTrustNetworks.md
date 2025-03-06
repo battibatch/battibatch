@@ -400,12 +400,107 @@ embrace "never trust, always verify"
     ![alt text](image-27.png)
     - Understand flows
         - wireshark, AWS Flow logs, and other tools
-    - micro-segmentation
-    210
+    - micro-segmentation: tiny networks
+        - easier to monitor
+        - very granular access
+    - Software defined perimeter - neat
+    - Controller-less architecture
+        - Config Mgmt
+            - changes applied to the whole fleet
+            - config stored in SCM
+            - drift is unlikely
+
+2. Implementation Phase
+app auth and authz
+- user/pass per app or Federated w/ IDP
+
+LB Auth and proxies
+- API keys and ephemeral creds are best practices 
+
+Relationship oriented policies
+- comms between 2 devices is defined by traditional network filtering
+- policy is tightly scoped to devices instead of networks
+
+Policy distribution
+- in mature ZTA, handled by control plane system
+- CM can fill void when controller-less
+
+ZTA Proxies
+- app level proxy servers that can be used to secure a ZTA
+- deployed as infra to handle auth and authz and encryption
+![alt text](image-28.png)
+- should not be on own device
+- good for making a 3rd party appliance work in a ZTA
+
+Endpoint security is paramount. Use and EDR
+
+Case study
+![alt text](image-29.png)
+
+PageDuty has an excellent case study on provider-agnostic ZTA using Chef
 
 ## Chapter 10: The Adversarial View
+Attack vectors
+![alt text](image-30.png)
+![alt text](image-31.png)
 
-## Chapter 11: Zero Trust Architecture Sta
+
+## Chapter 11: Zero Trust Architecture Standards, Frameworks and Guidelines
+![alt text](image-32.png)
+
+Key tenets of ZTA
+* always assume breach/compromise
+* always enforce least privilege
+* enforce per request/session access
+* enforce precise/just enough access
+* include all compute services in the system, including data sources as resources to be protected
+* Monitor all resources continuously, evaluate their security posture
+* never grant implicit access based on network location alone
+
+Logical components
+![alt text](image-33.png)
+
+Core components
+![alt text](image-34.png)
+![alt text](image-35.png)
+
+ZTA deployment variations
+- Device agent/Gateway-based deployment
+![alt text](image-36.png)
+    - ideal for enterprise w/robust asset mgmt, requires agents
+    - very hard with BYOD
+
+- Enclave based model
+![alt text](image-37.png)
+    - good for legacy on prem
+    - enables subjects to do reconn when they should not be able to. 
+
+- resource-portal based deployment
+![alt text](image-38.png)
+    - no agents needed
+    - lacks complete visibility of devices
+
+- Device application sandboxing
+![alt text](image-39.png)
+    - separation of apps add good security posture
+    - extra maintenance for sandboxed apps
+
+- Trust Algorithm 
+![alt text](image-40.png)
+
+ZTA threats
+![alt text](image-41.png)
+![alt text](image-42.png)
+
+
+CISA ZTA Maturity Model
+![alt text](image-43.png)
+
+Lots of other models that can be referenced...
 
 ## Chapter 12: Challenges and the Road Ahead
-
+- Mindset change in networking
+- Shadow it
+- Siloed Orgs
+- Lack of cohesive ZTA products
+- Scalability and Performance
