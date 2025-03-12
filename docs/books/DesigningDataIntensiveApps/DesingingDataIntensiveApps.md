@@ -50,10 +50,29 @@ Reliability
 
 Scalability
 - reliable today doesn't mean reliable tomorrow
-
-
+- ability to cope with increased load
+- Describing Load (load parameters)
+    - depends on the architecture of ths system
+        - requests per sec, ration of reads to writes, num active users, etc.
+        - it is what matters, or the bottleneck
+- describing performance
+    - with load described, you investigate what happens when load increases
+        - when a load param increases and resources are unchanged, how is system affected?
+        - when load param increases, how do resources need to increase to prevent performance drop
+    - throughput: number of items per sec
+    - response time: time between request and response
+        - common to look for averages, then median
+- Approach to cope with load
+    - horizontal scaling - add machines
+    - vertical scaling - add resources to the same machine
+    - often a few medium/large machines is better for cont and load than many small machines
+    - auto or elastic scaling
+    - Architecture depends on the application
+        - 100k requests/s each 1kb is different than 3 requests/s of 2GB even though throughput is the same.
 
 Maintainability
+- Design software for maintainability
+
 
 ## Chapter 02: Data Models and Query Languages
 
