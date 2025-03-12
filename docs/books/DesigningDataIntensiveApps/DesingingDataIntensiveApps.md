@@ -72,9 +72,22 @@ Scalability
 
 Maintainability
 - Design software for maintainability
-
+    - Operability: easy for ops to keep system running
+        - provide good visibility into runtime behavior
+        - prod good support for automation and integration
+        - avoid dependency on individual machines
+        - provide good docs
+        - provide good defaults
+        - self healing
+        - predictable
+    - simplicity: easy for new engineers to understand
+        - add good abstractions
+    - Evolvability: easy to change
+        - refactor as needed
 
 ## Chapter 02: Data Models and Query Languages
+
+
 
 ## Chapter 03: Storage and Retrieval
 
