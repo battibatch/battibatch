@@ -86,8 +86,37 @@ Maintainability
         - refactor as needed
 
 ## Chapter 02: Data Models and Query Languages
+data models are most important part of software dev
+Relational vs Document models
+- NoSQL and document arrived to b/c
+    - need more scalability
+    - open sources
+    - specialized query operations
+    - too much restriction in relational
+- Object oriented apps require transition layers between objs, adding code. This is called impedance mismatch
+    - adding JSON models reduced the mismatch
+    - try and avoid duplicated relationships
+        - many to 1; many to many 
+        - removing the duplications is called normalization
+        - normalization doesn't fit well in Document DBs
+- Document is hierarchial model wrt storing nested records (1-to-many)
+- Today the data in the app helps determine which model is used.
+    - document has poor joins, but good flexibility
+    - Relational has great structure and joins, but schema updates are hard
+    - Document typically has data locality for performance
+    - modern relational support JSON and XML now
+    - some documents support joins
+Query languages
+- declarative
+    - typically more concise and readable
+    - lend to better parallel
+- Imperative
+    - 
+- MapReduce Querying
+    - somewhere between declarative and imperative
 
-
+Graph-like Data models
+    
 
 ## Chapter 03: Storage and Retrieval
 
