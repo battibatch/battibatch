@@ -167,6 +167,19 @@ Column-Oriented Storage
 - Data cubes and Materialized Views
 
 ## Chapter 04: Encoding and Evolution
+Formats for encoding data
+- in mem, data in objects, struct, lists, arrays, hash tables, trees, etc.
+- when written to a file, encoded i.e. JSON]
+- translation is needed
+- Each language has specific in memory formats, but prefer standardized encodings
+    - JSON, XML, CSV: all textual formats
+        - subtle problems
+            - JSON cannot distinguish between integer and float
+            - bad for binary strings 
+            - JSON rarely uses schema
+            - No schema for CSV
+- when data is in terabytes, it really matters, binary encoding like messagepack can help: 
+![alt text](image-4.png)
 
 
 
