@@ -116,9 +116,57 @@ Query languages
     - somewhere between declarative and imperative
 
 Graph-like Data models
-    
+- good for many-to-many relationships
+- graphs have 2 kinds of objects
+    - vertices (also known as nodes or entities)
+    - edges (also known as relationships or arcs)
+- examples of data modeled as a graph
+    - social graphs- vertices are people, edges indicate which people know each other
+    - web graph - vertices are webpages, edges indicate links to other pages
+    - road or rail networks - vertices are junctions, edges are road/rails between them
+- not limited to homogeneous data
+- many ways to structure data in a graph
+    - property graphs
+        - Graph Queries in SQL: can be done, but hard
+        - Triple-Stores - same as property graphs, but different words
+        - SPARQL is a query language for Triple stores
 
 ## Chapter 03: Storage and Retrieval
+Data structures that power your Database
+- Key value data (dictionaries)
+- Hash tables
+- Sorted String Tables (SSTables)
+- Log Structure Merge Trees (LSM Trees)
+    - have lower write amplification
+    - can be compressed better
+    - compactions will impact performance
+    - becoming increasingly popular
+- B Trees
+    - LSM faster for writes; B-trees faster for reads
+    - B trees must write everything twice, once to write ahead and once to the tree
+- Others
+    - primary index
+    - secondary index
+    - multi column index
+    - full-text search and fuzzy indexes
+
+Transaction processing or Analytics
+![alt text](image-1.png)
+- Data warehousing
+![alt text](image-2.png)
+- Stars and Snowflakes: schemas for analytics
+![alt text](image-3.png)
+
+Column-Oriented Storage
+- tables may be 100s of columns wide, but often, we only need 4-5 of them.
+- idea here is don't store all the values from from 1 row together, but store all the values from each column together. If each column is a file, then you only need to read the files for the columns that you need.
+
+
+
+
+
+
+
 
 ## Chapter 04: Encoding and Evolution
 
@@ -130,7 +178,7 @@ Graph-like Data models
 
 ## Chapter 08: The Trouble with Distributes systems
 
-## Chapter 09: COnsistency and Consensus
+## Chapter 09: Consistency and Consensus
 
 ## Chapter 10: Batch Processing
 
