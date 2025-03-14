@@ -160,15 +160,17 @@ Transaction processing or Analytics
 Column-Oriented Storage
 - tables may be 100s of columns wide, but often, we only need 4-5 of them.
 - idea here is don't store all the values from from 1 row together, but store all the values from each column together. If each column is a file, then you only need to read the files for the columns that you need.
-
-
-
-
-
-
-
+- Can be compressed too
+- Sort order doesn't matter; usually stored in the order they were written
+    - then can be ordered: C-store
+- Writing uses LSM-trees
+- Data cubes and Materialized Views
 
 ## Chapter 04: Encoding and Evolution
+
+
+
+
 
 ## Chapter 05: Replication
 
