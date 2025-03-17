@@ -175,17 +175,34 @@ Formats for encoding data
     - JSON, XML, CSV: all textual formats
         - subtle problems
             - JSON cannot distinguish between integer and float
-            - bad for binary strings 
+            - bad for binary strings
             - JSON rarely uses schema
             - No schema for CSV
 - when data is in terabytes, it really matters, binary encoding like messagepack can help: 
 ![alt text](image-4.png)
+- Thrift and Protocol Buffers
+    - binary encoding libs based on the same principle
+    - required a schema for data that is encoded
+    - schema evolves over time via field tag
+    - add new fields to the schema
+- Avro
+    - another binary encoding
+    - uses a schema, has 2 dif languages: 1 for human editing (IDL); 1 for machine (based on JSON)
+    - no tag numbers
+    - schema evolves with writes and reader schemas - they do not have to be the same. Avro resolve
+    - null is not valid type; 
+    - This enables dynamic generated schemas
 
-
-
-
+Modes of Dataflow
+- Dataflow through Databases
+- Dataflow via service calls
+- Dataflow via async messages passing
 
 ## Chapter 05: Replication
+
+Leaders and Followers
+- 
+
 
 ## Chapter 06: Partitioning
 
