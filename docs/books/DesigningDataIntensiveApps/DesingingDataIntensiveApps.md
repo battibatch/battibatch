@@ -229,7 +229,32 @@ Leaders and Followers
     - Dynamo-style
 
 ## Chapter 06: Partitioning
+Partition == shard in this section
+Partitioning is done for scale
 
+Partition + Replication
+![alt text](image-12.png)
+
+Partitioning by Key Range
+![alt text](image-13.png)
+
+Partitioning by has of key
+![alt text](image-14.png)
+
+Partitioning and Secondary Indexes
+![alt text](image-15.png)
+![alt text](image-16.png)
+
+Partitioning requires rebalancing to improve performance
+- it should not move data around more than is required
+- ![alt text](image-17.png)
+- auto rebalancing can be unpredictable, so manual is sometimes preferred
+
+Request Routing
+- How to know which partition has the data?
+![alt text](image-18.png)
+- Zookeeper can keep track
+![alt text](image-19.png)
 
 
 ## Chapter 07: Transactions
