@@ -201,10 +201,36 @@ Modes of Dataflow
 ## Chapter 05: Replication
 
 Leaders and Followers
-- 
-
+- How do we ensure data gets to all DB replicas
+    - Leader based replication, also knowns as active/passive, master/slave
+    - ![alt text](image-5.png)
+    - Synchronous of Async? 
+    - ![alt text](image-6.png)
+    - sync advantage is follower is guaranteed to have up to date data; but if a follower is down, write will fail
+    - favor semi-synchronous with a mix of both
+- How to handle outages
+    - Leader failure: failover
+    - follower failure: catch up recovery
+    - Replication Logs are required
+    - Logical (row-based) replication is another alternative
+    - problems with both
+    ![alt text](image-7.png)
+    - monotonic reads prevent time appearing to go backwards
+    ![alt text](image-8.png)
+- Multi-leader replication or active/active
+    - use cases
+        - multi-datacenter replication
+        - ![alt text](image-9.png)
+        - enables offline operations and collaborative editing
+        - ![alt text](image-10.png)
+    - Multi-leader Replication Topologies
+        - ![alt text](image-11.png)
+- Leaderless replication
+    - Dynamo-style
 
 ## Chapter 06: Partitioning
+
+
 
 ## Chapter 07: Transactions
 
