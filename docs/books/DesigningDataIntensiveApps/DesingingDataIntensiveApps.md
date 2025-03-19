@@ -258,8 +258,32 @@ Request Routing
 
 
 ## Chapter 07: Transactions
+Many things in data systems can go wrong; transaction logs enable reliability and recovery
+- ACID - Atomic, consistency, isolation, Durability; goal is for DB to meet this
+- if not ACID compliant, then usually BASE - Basically available, soft state, and eventually consistent
+    - Atomic means it cannot be decomposed further. For examples an atomic thread means it cannot be see half of a result.
+    - Consistency in this context means certain statements must always be true; debts + credits must balance
+    - Isolation - concurrently executing transactions are isolated from each other
+    - Durability - once a transaction is committed, any data it has written will not be forgotten.
+- Single object and multi-object transactions
+    - multi obj transaction modify the several objects at once.
+    - single objects transactions could be used, but for reasons, multi is better
+
+Weak isolation levels
+- isolation prevents consistency problems (race conditions)
+    - DIrty Read
+    - Dirty Writes
+    - Read skew
+    - Lost updates
+    - Write skew
+    - Phantom reads
+3 approaches to transactions
+- literally executing transactions in serial order
+- 2 phase locking
+- serializable snapshot isolation (SSI)
 
 ## Chapter 08: The Trouble with Distributes systems
+
 
 ## Chapter 09: Consistency and Consensus
 
