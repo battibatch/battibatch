@@ -289,16 +289,48 @@ Range of problems in distributed systems
 - latency
 - Partial failures
 
-To tolerate faults, 
+To tolerate faults:
 - first detect them
     - detect limping (1kb on 1Gb interface)
 - then make system tolerate faults
 
 
 ## Chapter 09: Consistency and Consensus
+Linearizability - consistency model to make replicated data appear as though there were only a single copy and to make all operations act on it atomically.
+- can be slow, especially with network delays
+causality - weaker consistency model with somethings can be concurrent, so version history is more like branch and merge. 
 
+this leads to consensus - deciding something in such a way that all nodes agree and the decision is irrevocable. 
+- Equivalent problems
+    - lineraizable compare and set registers
+    - atomic transaction commit
+    - total order broadcast
+    - locks and leases
+    - membership/coordination service
+    - uniqueness constraint
+- These are easy w/ single node or single node decision, but when that fails ??
+    - wait for leader to revover
+    - manually fail over
+    - auto choose new leader 
+- Zookeeper is good at this
 
 ## Chapter 10: Batch Processing
+System of record == source of truth
+derived data system is taking some existing data from another system and transforming it in some way.
+- derived data is redundant
+- commonly denormalized
+
+3 types of systems
+- Services - online
+- Batch processing - offline
+- Stream processing - real time
+
+UNix tools
+- chain of CLI commands vs Program
+- Sorting vs in memory aggregations
+
+MapReduce and Distributed File systems
+
 
 ## Chapter 11: Stream Processing
 
