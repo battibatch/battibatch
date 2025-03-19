@@ -283,9 +283,20 @@ Weak isolation levels
 - serializable snapshot isolation (SSI)
 
 ## Chapter 08: The Trouble with Distributes systems
+Range of problems in distributed systems
+- network
+- clock
+- latency
+- Partial failures
+
+To tolerate faults, 
+- first detect them
+    - detect limping (1kb on 1Gb interface)
+- then make system tolerate faults
 
 
 ## Chapter 09: Consistency and Consensus
+
 
 ## Chapter 10: Batch Processing
 
