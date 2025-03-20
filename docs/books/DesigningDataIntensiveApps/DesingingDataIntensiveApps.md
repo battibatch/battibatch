@@ -329,11 +329,35 @@ UNix tools
 - chain of CLI commands vs Program
 - Sorting vs in memory aggregations
 
-MapReduce and Distributed File systems
+2 main problems batch processing needs to solve
+- Partitioning
+    - MapReduce
+- fault tolerance
+    - MapReduce
 
+Join algorithms for MapReduce
+- SOrt-merge joins
+- Broadcast has joins
+- partition hash joins
+
+Distributed batch processing engines are deliberately restricted programming model
+- callback functions are assumed to be stateless
 
 ## Chapter 11: Stream Processing
+Stream is batch processing, but unbounded
+
+2 types of message brokers
+- AMQP/JMS style message broker
+- Log based message broker
+
+representing DBs at streams open opportunities for system integrationss
+
+3 types of joins in Stream processing
+- stream-stream joins
+- stream-table joins
+- table-table-joins
 
 ## Chapter 12: The Future of Data Systems
+Nothing new
 
 
