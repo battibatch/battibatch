@@ -13,8 +13,8 @@
 * Threat Modeling
 * Data Engineering Pipelines
 
-## github_stats
-https://github-readme-streak-stats.herokuapp.com/?user=battibatch
+<!-- ## github_stats
+https://github-readme-streak-stats.herokuapp.com/?user=battibatch -->
 
 
 
