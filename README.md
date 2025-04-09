@@ -1,12 +1,20 @@
 # battibatch
+[![Linkedin: scottbatchelder](https://img.shields.io/badge/-scottbatchelder-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/scottbatchelder/)](https://www.linkedin.com/in/scottbatchelder/)
+
+[User Manual](https://github.com/battibatch/battibatch/blob/main/user-manual.md)
+
+[Knowledge Base](https://github.com/battibatch/knowledge-base)
 
 ## about_me
 * DevSecOps Engineer
+* Automation Enthusiast
 * Growth mindset evangelist
-* people person
+* People person
+
 
 ## currently_working_on
-* Information Assurance and Compliance Automation
+* Information Assurance
+* Compliance Automation
 
 ## currently_learning
 * LLM training
